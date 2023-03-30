@@ -1,0 +1,235 @@
+{
+    "bbb": [
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 1,
+            "lat": 47.9955915,
+            "loc": "16 Pl. Saint-Corentin, 29000 Quimper, France",
+            "lon": -4.1033419
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 2,
+            "lat": 47.8728637,
+            "loc": "14 Pl. Saint-Guénolé, 29900 Concarneau, France",
+            "lon": -3.9134926
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 3,
+            "lat": 47.8938836,
+            "loc": "18 Rue de Cornouaille, 29170 Fouesnant, France",
+            "lon": -4.0114718
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 4,
+            "lat": 47.8556234,
+            "loc": "1 Rue Emile Bernard, 29930 Pont-Aven, France",
+            "lon": -3.7483475
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 5,
+            "lat": 47.7479975,
+            "loc": "3 Rue du Port, 56100 Lorient, France",
+            "lon": -3.3630907
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 6,
+            "lat": 47.3460948,
+            "loc": "6 Pl. de la République, 56360 Le Palais, France",
+            "lon": -3.1546735
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 7,
+            "lat": 47.479179,
+            "loc": "10 Rue de Kervozes, 56170 Quiberon, France",
+            "lon": -3.1259166
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 8,
+            "lat": 47.4896648,
+            "loc": "Boulevard plein O, 56170 Quiberon, France",
+            "lon": -3.1233414
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 9,
+            "lat": 47.5737234,
+            "loc": "77 Av. des Druides, 56340 Carnac, France",
+            "lon": -3.0722755
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 10,
+            "lat": 47.5859928,
+            "loc": "6 Cr des Quais, 56470 La Trinité-sur-Mer, France",
+            "lon": -3.027041
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 11,
+            "lat": 47.6664425,
+            "loc": "4 Pl. de la République, 56400 Auray, France",
+            "lon": -2.9823338
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 12,
+            "lat": 47.6454131,
+            "loc": "1 All. Gustave Eiffel, 56610 Arradon, France",
+            "lon": -2.813055
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 13,
+            "lat": 47.6554485,
+            "loc": "21 Pl. du Poids public, 56000 Vannes, France",
+            "lon": -2.7582594
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 14,
+            "lat": 47.5428405,
+            "loc": "Quai des Voiliers, 56640 Arzon, France",
+            "lon": -2.8948522
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 15,
+            "lat": 47.5267493,
+            "loc": "22 Rue du Gén de Gaulle, 56370 Sarzeau, France",
+            "lon": -2.7704223
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 16,
+            "lat": 47.3482692,
+            "loc": "23 Quai Saint-Paul, 44420 La Turballe, France",
+            "lon": -2.5123718
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 17,
+            "lat": 47.2945889,
+            "loc": "4 Quai de la Petite Chambre, 44490 Le Croisic, France",
+            "lon": -2.5112699
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 18,
+            "lat": 47.2763524,
+            "loc": "23 Quai Jules Sandeau, 44510 Le Pouliguen, France",
+            "lon": -2.427677
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 19,
+            "lat": 47.2854449,
+            "loc": "112 Av. du Général de Gaulle, 44500 La Baule-Escoublac, France",
+            "lon": -2.3916594
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 20,
+            "lat": 47.2137053,
+            "loc": "12 Rue de la Fosse, 44000 Nantes, France",
+            "lon": -1.5590243
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 21,
+            "lat": 47.1148499,
+            "loc": "58 Rue des Sables, 44210 Pornic, France",
+            "lon": -2.1049272
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 22,
+            "lat": 47.0005323,
+            "loc": "44 Pl. de la République, 85330 Noirmoutier-en-l'Île, France",
+            "lon": -2.2473692
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 23,
+            "lat": 46.7923212,
+            "loc": "9 Rue Georges Clemenceau, 85160 Saint-Jean-de-Monts, France",
+            "lon": -2.0608536
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 24,
+            "lat": 46.4949176,
+            "loc": "15 Prom. de l'Amiral Lafargue, 85100 Les Sables-d'Olonne, France",
+            "lon": -1.7860671
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 25,
+            "lat": 46.2045284,
+            "loc": "5 Rue Jean Jaurès, 17410 Saint-Martin-de-Ré, France",
+            "lon": -1.3690164
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 26,
+            "lat": 46.157942,
+            "loc": "La), le, 1 Cr des Dames, 17000 La Rochelle, France",
+            "lon": -1.153675
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 27,
+            "lat": 45.9439852,
+            "loc": "78 Rue de la République, 17310 Saint-Pierre-d'Oléron, France",
+            "lon": -1.3054531
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 28,
+            "lat": 45.6213418,
+            "loc": "138 Rue Gambetta, 17200 Royan, France",
+            "lon": -1.030694
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 29,
+            "lat": 44.8389263,
+            "loc": "19 Rue des Trois-Conils, 33000 Bordeaux, France",
+            "lon": -0.5752709
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 30,
+            "lat": 45.0017129,
+            "loc": "1 All. Pierre Ortal Local 7, 33680 Lacanau, France",
+            "lon": -1.2013983
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 31,
+            "lat": 44.7413285,
+            "loc": "24 Av. du Général de Gaulle, 33510 Andernos-les-Bains, France",
+            "lon": -1.0996737
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 32,
+            "lat": 44.6612788,
+            "loc": "19 Av. Gambetta, 33120 Arcachon, France",
+            "lon": -1.1685546
+        },
+        {
+            "Address": "magasin Belle-îloise",
+            "id": 33,
+            "lat": 47.4692987,
+            "loc": "25 Rue Voltaire, 49100 Angers, France",
+            "lon": -0.5528951
+        }
+    ]
+}

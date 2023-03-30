@@ -1,0 +1,731 @@
+{"bbb": [
+        {
+            "Address": "PRIM'VERT",
+            "id": 1,
+            "lat": 48.57208,
+            "loc": "29260 Lesneven, France",
+            "lon": -4.32229
+        },
+        {
+            "Address": "BIOCOOP ELORN LANDIVISIAU",
+            "id": 2,
+            "lat": 48.5074495,
+            "loc": "31 Rue la Tour d'Auvergne, 29400 Landivisiau, France",
+            "lon": -4.0717953
+        },
+        {
+            "Address": "BIO'ABERS",
+            "id": 3,
+            "lat": 48.4240005,
+            "loc": "ZONE DE MESPAOL, 8 Rue des Entrepreneurs, 29290 Saint-Renan, France",
+            "lon": -4.6034206
+        },
+        {
+            "Address": "BIOCOOP FINISTERRA DES TROIS POI",
+            "id": 4,
+            "lat": 48.3720016,
+            "loc": "22 Rue de Kerallan, 29280 Plouzané, France",
+            "lon": -4.5881986
+        },
+        {
+            "Address": "KERBIO RIVE DROITE",
+            "id": 5,
+            "lat": 48.3865105,
+            "loc": "114 Bd de Plymouth, 29200 Brest, France",
+            "lon": -4.5321832
+        },
+        {
+            "Address": "KERBIO SIAM",
+            "id": 6,
+            "lat": 48.3859158,
+            "loc": "7 Rue Amiral Linois, 29200 Brest, France",
+            "lon": -4.490431
+        },
+        {
+            "Address": "KERBIO CENTRE VILLE",
+            "id": 7,
+            "lat": 48.397278,
+            "loc": "3 Rue Kerfautras, 29200 Brest, France",
+            "lon": -4.4763053
+        },
+        {
+            "Address": "BIOCOOP BARADOZIG",
+            "id": 8,
+            "lat": 48.3999748,
+            "loc": "7 Bd Charles de Gaulle, 29480 Le Relecq-Kerhuon, France",
+            "lon": -4.4082148
+        },
+        {
+            "Address": "BIOGASTELL",
+            "id": 9,
+            "lat": 48.3685434,
+            "loc": "45 Rue Jean Fournier, 29470 Plougastel-Daoulas, France",
+            "lon": -4.3719952
+        },
+        {
+            "Address": "LA CLEF DES CHAMPS",
+            "id": 10,
+            "lat": 48.4545326,
+            "loc": "11 Rue Henri Dunant, 29800 Landerneau, France",
+            "lon": -4.2566375
+        },
+        {
+            "Address": "BIOCOOP DOUARNENEZ",
+            "id": 11,
+            "lat": 48.080101,
+            "loc": "Rue Gabriel le Signe, Rte de Brest, 29100 Douarnenez, France",
+            "lon": -4.320872
+        },
+        {
+            "Address": "BIOCOOP LA MAISON BIOLOGIQUE",
+            "id": 12,
+            "lat": 48.0272719,
+            "loc": "HLM Kérivoas, 29770 Audierne, France",
+            "lon": -4.5505666
+        },
+        {
+            "Address": "BIOCOOP QUIMPER CHAPEAU ROUGE",
+            "id": 13,
+            "lat": 47.997106,
+            "loc": "16 Rue de la Providence, 29000 Quimper, France",
+            "lon": -4.1078707
+        },
+        {
+            "Address": "BIOCOOP QUIMPER Tréqueffelec",
+            "id": 14,
+            "lat": 48.0039717,
+            "loc": "5 All. de Trequeffelec, 29000 Quimper, France",
+            "lon": -4.0850843
+        },
+        {
+            "Address": "BIOCOOP GRAINE DE BIO COMBRIT",
+            "id": 15,
+            "lat": 47.8837321,
+            "loc": "Le Lannou, 29120 Combrit, France",
+            "lon": -4.1678812
+        },
+        {
+            "Address": "GRAINE DE BIO",
+            "id": 16,
+            "lat": 47.85513,
+            "loc": "Rte de Plomeur, 29120 Pont-l'Abbé, France",
+            "lon": -4.2435426
+        },
+        {
+            "Address": "BIOCOOP KONKAR'BIO",
+            "id": 17,
+            "lat": 47.8915079,
+            "loc": "Za De Keramperu, 4 Rue Lucien Vidie, 29900 Concarneau, France",
+            "lon": -3.916295
+        },
+        {
+            "Address": "BIOCOOP KONKAR'BIO CENTRE VILLE 1",
+            "id": 18,
+            "lat": 47.8717134,
+            "loc": "1 Pl. du Général de Gaulle, 29900 Concarneau, France",
+            "lon": -3.9193239
+        },
+        {
+            "Address": "BIOCOOP LES 7 EPIS MELLAC",
+            "id": 19,
+            "lat": 47.8699338,
+            "loc": "27 Kervidanou 3 ZAC de, Keringant, 29300 Mellac, France",
+            "lon": -3.5919601
+        },
+        {
+            "Address": "BIOCOOP LES 7 EPIS GUIDEL",
+            "id": 20,
+            "lat": 47.799917,
+            "loc": "Les Cinq Chemins, 56520 Guidel, France",
+            "lon": -3.4755991
+        },
+        {
+            "Address": "BIOCOOP LES 7 EPIS PONT-SCORFF",
+            "id": 21,
+            "lat": 47.7510355,
+            "loc": "38 Rue Général de Langle de Cary, 56100 Lorient, France",
+            "lon": -3.3666629
+        },
+        {
+            "Address": "BIOCOOP LES 7 EPIS LORIENT",
+            "id": 22,
+            "lat": 47.7633989,
+            "loc": "5-7 Rue Colonel le Barillec, 56100 Lorient, France",
+            "lon": -3.3977381
+        },
+        {
+            "Address": "BIOCOOP LES 7 EPIS LANESTER",
+            "id": 23,
+            "lat": 47.7778129,
+            "loc": "20 rue Jean Marie Djibaou Parc D'activités Manébos, 56600 Lanester, France",
+            "lon": -3.3510789
+        },
+        {
+            "Address": "BIOCOOP LES 7 EPIS LORIENT CV",
+            "id": 24,
+            "lat": 47.749912,
+            "loc": "7 Rue Vauban, 56100 Lorient, France",
+            "lon": -3.3631271
+        },
+        {
+            "Address": "BIOCOOP LES 7 EPIS RIANTEC",
+            "id": 25,
+            "lat": 47.7134437,
+            "loc": "31 Rue de Kerdurand, 56670 Riantec, France",
+            "lon": -3.3154249
+        },
+        {
+            "Address": "BIOCOOP CALLUNE BAUD",
+            "id": 26,
+            "lat": 47.8865941,
+            "loc": "79 Rte de Pontivy, 56150 Baud, France",
+            "lon": -3.015312
+        },
+        {
+            "Address": "BIOCOOP TI STAL LOSTENK",
+            "id": 27,
+            "lat": 47.7502053,
+            "loc": "19 Rue Paul le Roux, 56690 Nostang, France",
+            "lon": -3.1842861
+        },
+        {
+            "Address": "LA BELZ'SAISON",
+            "id": 28,
+            "lat": 47.670975,
+            "loc": "1 Rue du Suroit Za Suroit, 56550 Belz, France",
+            "lon": -3.183476
+        },
+        {
+            "Address": "BIOCOOP PLUVIGNER",
+            "id": 29,
+            "lat": 47.763916,
+            "loc": "66B Rue de la Gare, 56330 Pluvigner, France",
+            "lon": -3.0214253
+        },
+        {
+            "Address": "BIOCOOP CALLUNE LOCMINE",
+            "id": 30,
+            "lat": 47.8764389,
+            "loc": "Talvern, Za, Kerforho, 56500 Bignan, France",
+            "lon": -2.8194842
+        },
+        {
+            "Address": "BIOCOOP CALLUNE",
+            "id": 31,
+            "lat": 48.0579691,
+            "loc": "2 rue Colette Besson, Rue de Lattre de Tassigny, 56300 Pontivy, France",
+            "lon": -2.9501777
+        },
+        {
+            "Address": "BIOCOOP HORIZON BIO",
+            "id": 32,
+            "lat": 47.667703,
+            "loc": "37 Rue Jean Marie Barre, 56400 Auray, France",
+            "lon": -2.985278
+        },
+        {
+            "Address": "BIOCOOP HORIZON BIO PORTE OCEANE",
+            "id": 33,
+            "lat": 47.6642416,
+            "loc": "40 Av. de l'Océan, 56400 Auray, France",
+            "lon": -3.0042503
+        },
+        {
+            "Address": "BIOCOOP BIO GOLFE VANNES CENTRE",
+            "id": 34,
+            "lat": 47.6589298,
+            "loc": "6 Rue Joseph le Brix, 56000 Vannes, France",
+            "lon": -2.7590595
+        },
+        {
+            "Address": "BIO GOLFE LUSCANEN",
+            "id": 35,
+            "lat": 47.6628934,
+            "loc": "7 Av. Louis de Cadoudal, 56880 Ploeren, France",
+            "lon": -2.8013739
+        },
+        {
+            "Address": "BIO GOLFE ST AVE",
+            "id": 36,
+            "lat": 47.6811694,
+            "loc": "5 Rue Marcel Dassault, 56890 Saint-Avé, France",
+            "lon": -2.7362084
+        },
+        {
+            "Address": "BIO GOLFE THEIX",
+            "id": 37,
+            "lat": 47.647741,
+            "loc": "ZA Atlantheix, 4 Rue Jacques Cartier, 56450 Theix-Noyalo, France",
+            "lon": -2.7067867
+        },
+        {
+            "Address": "BIOCOOP CARNAC",
+            "id": 38,
+            "lat": 47.5835379,
+            "loc": "4 bis Av. du Rahic, 56340 Carnac, France",
+            "lon": -3.0752445
+        },
+        {
+            "Address": "LE PANIER BIO",
+            "id": 39,
+            "lat": 47.5618421,
+            "loc": "Espace littoral, 17 Rue des Salicornes, 56190 Muzillac, France",
+            "lon": -2.5128519
+        },
+        {
+            "Address": "Le HERON BLEU",
+            "id": 40,
+            "lat": 47.6736851,
+            "loc": "5 Rue Louis Guilloux, 35600 Redon, France",
+            "lon": -2.064933
+        },
+        {
+            "Address": "LE HERON BLEU ALLAIRE",
+            "id": 41,
+            "lat": 47.6372365,
+            "loc": "21 Rue de la Libération, 56350 Allaire, France",
+            "lon": -2.1636695
+        },
+        {
+            "Address": "BIOCOOP BELLE-ISLE EN BIO",
+            "id": 42,
+            "lat": 47.3277147,
+            "loc": "Zone de, Merezelle, 56360 Le Palais, France",
+            "lon": -3.1676337
+        },
+        {
+            "Address": "HAMEAUX BIO II GUERANDE",
+            "id": 43,
+            "lat": 47.3244176,
+            "loc": "Zac de Villejames, 3 Rue de la Briquerie, 44350 Guérande, France",
+            "lon": -2.4109656
+        },
+        {
+            "Address": "HAMEAUX BIO 6 PORNICHET",
+            "id": 44,
+            "lat": 47.2574723,
+            "loc": "4 Av. du Courtil Riel, 44380 Pornichet, France",
+            "lon": -2.316709
+        },
+        {
+            "Address": "HAMEAUX BIO 4 SAINT NAZAIRE",
+            "id": 45,
+            "lat": 47.2798313,
+            "loc": "89 Rue Jean Jaurès, 44600 Saint-Nazaire, France",
+            "lon": -2.2157379
+        },
+        {
+            "Address": "HAMEAUX BIO TRIGNAC",
+            "id": 46,
+            "lat": 47.291147,
+            "loc": "Rue des Aigrettes, 44570 Trignac, France",
+            "lon": -2.2102969
+        },
+        {
+            "Address": "HAMEAUX BIO 3 PORNIC",
+            "id": 47,
+            "lat": 47.1278339,
+            "loc": "Zone de lEurope, 1 Rue du Traité de Lisbonne, 44210 Pornic, France",
+            "lon": -2.1234929
+        },
+        {
+            "Address": "LE SILLON BIO",
+            "id": 48,
+            "lat": 47.372148,
+            "loc": "ZAC de la Colleraye, 44260 Savenay, France",
+            "lon": -1.9364335
+        },
+        {
+            "Address": "BIOCOOP LE BRIVET BIO",
+            "id": 49,
+            "lat": 47.4349479,
+            "loc": "Parc commercial Rive Sud ZAC de la Hirtais, s/Brivet, 44160 Sainte-Anne-sur-Brivet, France",
+            "lon": -2.072741
+        },
+        {
+            "Address": "BIOCOOP PLACE BRETAGNE",
+            "id": 50,
+            "lat": 47.216758,
+            "loc": "14 Rue de Budapest, 44000 Nantes, France",
+            "lon": -1.5596095
+        },
+        {
+            "Address": "BIOCOOP NANTES CITE DES CONGRES",
+            "id": 51,
+            "lat": 47.211176,
+            "loc": "20 Rue de Mayence, 44000 Nantes, France",
+            "lon": -1.5452261
+        },
+        {
+            "Address": "BIOCOOP NANTES REPUBLIQUE",
+            "id": 52,
+            "lat": 47.2041233,
+            "loc": "17 Bd Gustave Roch, 44200 Nantes, France",
+            "lon": -1.55049
+        },
+        {
+            "Address": "BIOCOOP NANTES CHANTIERS NAVALS",
+            "id": 53,
+            "lat": 47.2100929,
+            "loc": "1 Rue Lamoricière, 44100 Nantes, France",
+            "lon": -1.570832
+        },
+        {
+            "Address": "BIOCOOP NANTES SCHUMAN",
+            "id": 54,
+            "lat": 47.2415344,
+            "loc": "160 Bd Robert Schuman, 44300 Nantes, France",
+            "lon": -1.5730759
+        },
+        {
+            "Address": "BIOCOOP NANTES NORD",
+            "id": 55,
+            "lat": 47.261121,
+            "loc": "188 Rte de Rennes, 44300 Nantes, France",
+            "lon": -1.5821075
+        },
+        {
+            "Address": "BIOCOOP LES HAMEAUX BIO NANTES",
+            "id": 56,
+            "lat": 47.259098,
+            "loc": "19 Rue du Marché Commun, 44300 Nantes, France",
+            "lon": -1.501152
+        },
+        {
+            "Address": "BIOCOOP NANTES ORVAULT",
+            "id": 57,
+            "lat": 47.2540888,
+            "loc": "Le Forum, 8 Rue du Commandant Charcot, 44700 Orvault, France",
+            "lon": -1.6172049
+        },
+        {
+            "Address": "BIOCOOP CARQUEFOU COLIBRI",
+            "id": 58,
+            "lat": 47.2975407,
+            "loc": "28 Rue du 9 Août 1944, 44470 Carquefou, France",
+            "lon": -1.4937494
+        },
+        {
+            "Address": "BIOCOOP LES HAMEAUX BIO BARBARA",
+            "id": 59,
+            "lat": 47.2712085,
+            "loc": "22 Rue Barbara, 44300 Nantes, France",
+            "lon": -1.5203233
+        },
+        {
+            "Address": "BIOCOOP LA CHAPELLE",
+            "id": 60,
+            "lat": 47.2687377,
+            "loc": "Bd Pasteur, 44430 Divatte-sur-Loire, France",
+            "lon": -1.3371983
+        },
+        {
+            "Address": "BIOCOOP NANTES SUD",
+            "id": 61,
+            "lat": 47.1886016,
+            "loc": "1 Rue Louis Blanc, 44230 Saint-Sébastien-sur-Loire, France",
+            "lon": -1.4922233
+        },
+        {
+            "Address": "BIOCOOP REZE ST PAUL",
+            "id": 62,
+            "lat": 47.183446,
+            "loc": "24 Rue Aristide Briand, 44400 Rezé, France",
+            "lon": -1.546066
+        },
+        {
+            "Address": "BIOCOOP NANTES ST HERBLAIN",
+            "id": 63,
+            "lat": 47.2264901,
+            "loc": "332 Bd Marcel Paul, 44800 Saint-Herblain, France",
+            "lon": -1.6385477
+        },
+        {
+            "Address": "SAVEUR NATURE",
+            "id": 64,
+            "lat": 47.3741742,
+            "loc": "225 Bd de la Prairie, 44150 Ancenis-Saint-Géréon, France",
+            "lon": -1.1951125
+        },
+        {
+            "Address": "LA SANGUEZE",
+            "id": 65,
+            "lat": 47.160929,
+            "loc": "44330 Vallet, France",
+            "lon": -1.265138
+        },
+        {
+            "Address": "BIOCOOP DES 3 PROVINCES",
+            "id": 66,
+            "lat": 47.0985815,
+            "loc": "5 Rue des Malifestes, 44190 Clisson, France",
+            "lon": -1.2813279
+        },
+        {
+            "Address": "BIOCOOP ALTERNATIVE NOIRMOUTIER",
+            "id": 67,
+            "lat": 46.967962,
+            "loc": "Rue de Noirmoutier, 85680 La Guérinière, France",
+            "lon": -2.2384424
+        },
+        {
+            "Address": "BIOCOOP LES OYATS",
+            "id": 68,
+            "lat": 46.7917872,
+            "loc": "16 Rue des Sables, 85160 Saint-Jean-de-Monts, France",
+            "lon": -2.0543454
+        },
+        {
+            "Address": "BIOCOOP GRAIN DE SEL",
+            "id": 69,
+            "lat": 46.7135311,
+            "loc": "12 Chem. de la Petite Croix, 85270 Saint-Hilaire-de-Riez, France",
+            "lon": -1.9432992
+        },
+        {
+            "Address": "BIOCOOP DES OLONNES",
+            "id": 70,
+            "lat": 46.4915314,
+            "loc": "Rd point de La Boussole, 24 Rue des Plesses, 85180 Les Sables-d'Olonne, France",
+            "lon": -1.750759
+        },
+        {
+            "Address": "BIOCOOP LES DUNES",
+            "id": 71,
+            "lat": 46.6056396,
+            "loc": "21 Rue de l'Océan, 85470 Brem-sur-Mer, France",
+            "lon": -1.83394
+        },
+        {
+            "Address": "REGAIN NORD",
+            "id": 72,
+            "lat": 46.1747017,
+            "loc": "27 Av. de Lagord Vendôme, 17140 Lagord, France",
+            "lon": -1.160536
+        },
+        {
+            "Address": "REGAIN SUD",
+            "id": 73,
+            "lat": 46.1075978,
+            "loc": "Zac Des Fourneaux, Rue Albert Denis, 17690 Angoulins, France",
+            "lon": -1.1005369
+        },
+        {
+            "Address": "BIOCOOP L'ILE AU BIO",
+            "id": 74,
+            "lat": 46.1983463,
+            "loc": "17 Av. Général de Gaulle, 17410 Saint-Martin-de-Ré, France",
+            "lon": -1.358802
+        },
+        {
+            "Address": "BIOCOOP ROCHEFORT",
+            "id": 75,
+            "lat": 45.9524497,
+            "loc": "9 Rue de Villeneuve-Montigny, 17300 Rochefort, France",
+            "lon": -0.9810799
+        },
+        {
+            "Address": "BIOCOOP L'ILE AU BIO ARS EN RE",
+            "id": 76,
+            "lat": 46.2058963,
+            "loc": "11 Rte de Saint-Clément, 17590 Ars-en-Ré, France",
+            "lon": -1.5204474
+        },
+        {
+            "Address": "BIOCOOP DU PAYS SANTON",
+            "id": 77,
+            "lat": 45.7474787,
+            "loc": "4 rue du Champ de Tir Parc Atlantique les Côteaux, 17100 Saintes, France",
+            "lon": -0.6734177
+        },
+        {
+            "Address": "PAYS DE COGNAC",
+            "id": 78,
+            "lat": 45.6832133,
+            "loc": "Rue Montesquieu, 16100 Cognac, France",
+            "lon": -0.3336971
+        },
+        {
+            "Address": "BIOCOOP ROYAN LAVOISIER",
+            "id": 79,
+            "lat": 45.6319567,
+            "loc": "24 Rue Antoine-Laurent de Lavoisier, 17200 Royan, France",
+            "lon": -0.9874596
+        },
+        {
+            "Address": "BIOCOOP GEMOZAC",
+            "id": 80,
+            "lat": 45.5779151,
+            "loc": "ZA de pied sec Nord, Pied Sec, 17260 Gémozac, France",
+            "lon": -0.6820343
+        },
+        {
+            "Address": "BIOCOOP DE L'ESTUAIRE",
+            "id": 81,
+            "lat": 45.2131737,
+            "loc": "3 Rue des Cabernets, 33250 Pauillac, France",
+            "lon": -0.7645537
+        },
+        {
+            "Address": "SAISON BIO",
+            "id": 82,
+            "lat": 44.9103815,
+            "loc": "39 Av. de Verdun, 33500 Libourne, France",
+            "lon": -0.2380622
+        },
+        {
+            "Address": "BIOCOOP GAMBETTA",
+            "id": 83,
+            "lat": 44.8416035,
+            "loc": "27 Rue Judaïque, 33000 Bordeaux, France",
+            "lon": -0.5825181
+        },
+        {
+            "Address": "BIOCOOP Victoire",
+            "id": 84,
+            "lat": 44.8300264,
+            "loc": "10 Cr de l'Argonne, 33000 Bordeaux, France",
+            "lon": -0.5729366
+        },
+        {
+            "Address": "BIOCOOP LA BASTIDE",
+            "id": 85,
+            "lat": 44.8411039,
+            "loc": "1 All. Serr, 33100 Bordeaux, France",
+            "lon": -0.5614074
+        },
+        {
+            "Address": "BIOCOOP CHARTRONS",
+            "id": 86,
+            "lat": 44.8520412,
+            "loc": "6 Rue Sicard, 33000 Bordeaux, France",
+            "lon": -0.5727248
+        },
+        {
+            "Address": "BIOCOOP CAUDERAN",
+            "id": 87,
+            "lat": 44.8522003,
+            "loc": "48 Av. du Général Leclerc, 33200 Bordeaux, France",
+            "lon": -0.6083943
+        },
+        {
+            "Address": "BIOCOOP LE BOUSCAT",
+            "id": 88,
+            "lat": 44.8670487,
+            "loc": "340 Avenue de la Liberation, 33110 Le Bouscat, France",
+            "lon": -0.6070725
+        },
+        {
+            "Address": "BIOCOOP BORDEAUX LAC",
+            "id": 89,
+            "lat": 44.8722798,
+            "loc": "Zone Alfred Daney, Rue Francis Garnier, 33300 Bordeaux, France",
+            "lon": -0.5647841
+        },
+        {
+            "Address": "BIOCOOP 4 PAVILLONS",
+            "id": 90,
+            "lat": 44.8651231,
+            "loc": "213 Av. Carnot, 33150 Cenon, France",
+            "lon": -0.5151172
+        },
+        {
+            "Address": "BIOCOOP ARTIGUES",
+            "id": 91,
+            "lat": 44.8466897,
+            "loc": "25 Av. de l'Île de France, 33370 Artigues-près-Bordeaux, France",
+            "lon": -0.4966592
+        },
+        {
+            "Address": "BIOCOOP TALENCE",
+            "id": 92,
+            "lat": 44.8014642,
+            "loc": "540 Cr de la Libération, 33400 Talence, France",
+            "lon": -0.5939249
+        },
+        {
+            "Address": "BIOCOOP BOULIAC",
+            "id": 93,
+            "lat": 44.8178325,
+            "loc": "Rue de la Gabarre PA du, Lot. Commercial de Vimeney, 33270 Floirac, France",
+            "lon": -0.5292616
+        },
+        {
+            "Address": "BIOCOOP MERIGNAC",
+            "id": 94,
+            "lat": 44.8265739,
+            "loc": "72 Av. Pierre Mendès-France, 33700 Mérignac, France",
+            "lon": -0.6376739
+        },
+        {
+            "Address": "BIOCOOP ST JEAN D'ILLAC",
+            "id": 95,
+            "lat": 44.8105344,
+            "loc": "55 All. Jean Jacques Rousseau, 33127 Saint-Jean-d'Illac, France",
+            "lon": -0.7753647
+        },
+        {
+            "Address": "BIOCOOP CESTAS",
+            "id": 96,
+            "lat": 44.7800232,
+            "loc": "8 Av. de Verdun, 33610 Cestas, France",
+            "lon": -0.6902701
+        },
+        {
+            "Address": "BIOCOOP PESSAC",
+            "id": 97,
+            "lat": 44.8062864,
+            "loc": "14 Av. Jean Jaurès, 33600 Pessac, France",
+            "lon": -0.6296454
+        },
+        {
+            "Address": "SAVEURS ET NATURE",
+            "id": 98,
+            "lat": 44.7701153,
+            "loc": "47 Rue du Professeur Bernard, 33170 Gradignan, France",
+            "lon": -0.6108875
+        },
+        {
+            "Address": "BIOCOOP LANGON",
+            "id": 99,
+            "lat": 44.5528549,
+            "loc": "10 Pl. Kennedy, 33210 Langon, France",
+            "lon": -0.2494327
+        },
+        {
+            "Address": "BIOCOOP LA BREDE",
+            "id": 100,
+            "lat": 44.6868709,
+            "loc": "80 avenue Charles de Gaulle, À la Perrucade ZA, 33650 La Brède, France",
+            "lon": -0.518961
+        },
+        {
+            "Address": "BIOCOOP LESPARRE",
+            "id": 101,
+            "lat": 45.2990608,
+            "loc": "24 Rte de Bordeaux, 33340 Lesparre-Médoc, France",
+            "lon": -0.9320327
+        },
+        {
+            "Address": "BIOCOOP LA TESTE",
+            "id": 102,
+            "lat": 44.6338191,
+            "loc": "7 Av. de Verdun, 33260 La Teste-de-Buch, France",
+            "lon": -1.1523464
+        },
+        {
+            "Address": "BIOCOOP GUJAN",
+            "id": 103,
+            "lat": 44.6362746,
+            "loc": "98 Cr de Verdun, 33470 Gujan-Mestras, France",
+            "lon": -1.0815732
+        },
+        {
+            "Address": "BIOCOOP ANDERNOS",
+            "id": 104,
+            "lat": 44.737666,
+            "loc": "83 Bd de la République, 33510 Andernos-les-Bains, France",
+            "lon": -1.0903296
+        }
+    ]
+}

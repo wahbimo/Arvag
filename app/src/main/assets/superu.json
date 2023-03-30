@@ -1,0 +1,1158 @@
+{"lll":[
+    {
+        "Address": "SUPER U PLABENNEC",
+        "id": 1,
+        "lat": 48.5037673,
+        "loc": "14 Rue Marcel Bouguen, 29860 Plabennec, France",
+        "lon": -4.4277912
+    },
+    {
+        "Address": "U EXPRESS GOUESNOU",
+        "id": 2,
+        "lat": 48.4529933,
+        "loc": "Rue Saint-Gouesnou, 29850 Gouesnou, France",
+        "lon": -4.4660988
+    },
+    {
+        "Address": "SUPER U GUIPAVAS",
+        "id": 3,
+        "lat": 48.4365876,
+        "loc": "85 Rue Anne de Bretagne, 29490 Guipavas, France",
+        "lon": -4.4110298
+    },
+    {
+        "Address": "SUPER U BREST KEREDERN",
+        "id": 4,
+        "lat": 48.4060996,
+        "loc": "17 Rue Cuirassé Bretagne, 29200 Brest, France",
+        "lon": -4.4957205
+    },
+    {
+        "Address": "U EXPRESS BREST RECOUVRANCE",
+        "id": 5,
+        "lat": 48.3872874,
+        "loc": "33 Rue Saint-Exupéry, Angle De La, Rue Armorique, 29200 Brest, France",
+        "lon": -4.5038089
+    },
+    {
+        "Address": "SUPER U LANDIVISIAU",
+        "id": 6,
+        "lat": 48.5080627,
+        "loc": "63 Rue Général de Gaulle, 29400 Landivisiau, France",
+        "lon": -4.0780251
+    },
+    {
+        "Address": "SUPER U PLOUGASTEL",
+        "id": 7,
+        "lat": 48.381834,
+        "loc": "64 Av. Charles de Gaulle, 29470 Plougastel-Daoulas, France",
+        "lon": -4.3755621
+    },
+    {
+        "Address": "SUPER U DAOULAS",
+        "id": 8,
+        "lat": 48.3585173,
+        "loc": "Rue Edouard Danguy des Déserts, Le Clos du Vern, 29460 Daoulas, France",
+        "lon": -4.2576905
+    },
+    {
+        "Address": "SUPER U LE FAOU",
+        "id": 9,
+        "lat": 48.29876,
+        "loc": "Zone d'activité de Quiella Zone de Quiella, D42, 29590 Le Faou, France",
+        "lon": -4.16885
+    },
+    {
+        "Address": "U EXPRESS TELGRUC-SUR-MER",
+        "id": 10,
+        "lat": 48.2309801,
+        "loc": "2 Rue Sant Divy, 29560 Telgruc-sur-Mer, France",
+        "lon": -4.3567278
+    },
+    {
+        "Address": "U EXPRESS CROZON",
+        "id": 11,
+        "lat": 48.225977,
+        "loc": "All. des Tilleuls, 29160 Crozon, France",
+        "lon": -4.506247
+    },
+    {
+        "Address": "U EXPRESS CAMARET",
+        "id": 12,
+        "lat": 48.2743947,
+        "loc": "Rue du Loc'h, 29570 Camaret-sur-Mer, France",
+        "lon": -4.5954356
+    },
+    {
+        "Address": "U EXPRESS BRIEC",
+        "id": 13,
+        "lat": 48.1028885,
+        "loc": "Rue de Kerhapp, 29510 Briec, France",
+        "lon": -4.0007764
+    },
+    {
+        "Address": "SUPER U PLOGONNEC",
+        "id": 14,
+        "lat": 48.0714862,
+        "loc": "Route de Quimper, Kerantous D63, 29180 Plogonnec, France",
+        "lon": -4.1864657
+    },
+    {
+        "Address": "SUPER U LANDUDEC",
+        "id": 15,
+        "lat": 48.0016659,
+        "loc": "Rue des Écoles, 29710 Landudec, France",
+        "lon": -4.3377529
+    },
+    {
+        "Address": "SUPER U PONT-CROIX",
+        "id": 16,
+        "lat": 48.043752,
+        "loc": "10 Rue de la Liberté, 29790 Pont-Croix, France",
+        "lon": -4.4901963
+    },
+    {
+        "Address": "U EXPRESS QUIMPER",
+        "id": 17,
+        "lat": 47.9906467,
+        "loc": "82 Quai de l'Odet, 29000 Quimper, France",
+        "lon": -4.1119958
+    },
+    {
+        "Address": "SUPER U PLOBANNALEC",
+        "id": 18,
+        "lat": 47.8187876,
+        "loc": "Rue de Lesconil, 29740 Plobannalec-Lesconil, France",
+        "lon": -4.2284271
+    },
+    {
+        "Address": "U EXPRESS PONT-L'ABBE",
+        "id": 19,
+        "lat": 47.86402,
+        "loc": "2 Rue Roger Signor, 29120 Pont-l'Abbé, France",
+        "lon": -4.22259
+    },
+    {
+        "Address": "SUPER U COMBRIT",
+        "id": 20,
+        "lat": 47.8852855,
+        "loc": "Le Lannou, 29120 Combrit, France",
+        "lon": -4.1702624
+    },
+    {
+        "Address": "U EXPRESS FOUESNANT",
+        "id": 21,
+        "lat": 47.89164,
+        "loc": "15 Rue de Kerneveleck, 29170 Fouesnant, France",
+        "lon": -4.01275
+    },
+    {
+        "Address": "SUPER U ROSPORDEN",
+        "id": 22,
+        "lat": 47.9648713,
+        "loc": "Dioulan Vihan, Rte de Quimper, 29140 Rosporden, France",
+        "lon": -3.8512122
+    },
+    {
+        "Address": "SUPER U GUIDEL",
+        "id": 23,
+        "lat": 47.7857907,
+        "loc": "Rue de Carrigaline, Route des Plages, 56520 Guidel, France",
+        "lon": -3.4902481
+    },
+    {
+        "Address": "SUPER U PONT-SCORFF",
+        "id": 24,
+        "lat": 47.8293349,
+        "loc": "Kerpus, Rte de Lorient, 56620 Pont-Scorff, France",
+        "lon": -3.4019959
+    },
+    {
+        "Address": "SUPER U PLUVIGNER",
+        "id": 25,
+        "lat": 47.7729012,
+        "loc": "Rue Abbé le Maréchal, 56330 Pluvigner, France",
+        "lon": -3.0030822
+    },
+    {
+        "Address": "SUPER U BELZ",
+        "id": 26,
+        "lat": 47.6735289,
+        "loc": "15 Rue des Sports, 56550 Belz, France",
+        "lon": -3.1720281
+    },
+    {
+        "Address": "SUPER U AURAY",
+        "id": 27,
+        "lat": 47.6654585,
+        "loc": "Porte Oceane, 36 Av. de l'Océan, 56400 Auray, France",
+        "lon": -3.0033983
+    },
+    {
+        "Address": "SUPER U PLOUHARNEL",
+        "id": 28,
+        "lat": 47.6002245,
+        "loc": "Rdpt de l'Océan, 56340 Plouharnel, France",
+        "lon": -3.1118821
+    },
+    {
+        "Address": "SUPER U CARNAC",
+        "id": 29,
+        "lat": 47.584693,
+        "loc": "56340 Carnac, France",
+        "lon": -3.077786
+    },
+    {
+        "Address": "SUPER U QUIBERON",
+        "id": 30,
+        "lat": 47.4859428,
+        "loc": "116 Rue du Port de Pêche, 56170 Quiberon, France",
+        "lon": -3.1202096
+    },
+    {
+        "Address": "SUPER U BELLE-ILE-EN-MER",
+        "id": 31,
+        "lat": 47.3364213,
+        "loc": "Belle Île, 56360, France",
+        "lon": -3.1810427
+    },
+    {
+        "Address": "HYPER U SAINT AVE",
+        "id": 32,
+        "lat": 47.6836217,
+        "loc": "Espace Commerc De Coet Digo, Rue de Coëtdigo, 56890 Saint-Avé, France",
+        "lon": -2.763982
+    },
+    {
+        "Address": "SUPER U ARZON",
+        "id": 33,
+        "lat": 47.5424054,
+        "loc": "Rond-Point de Kerjouanno, 56640 Arzon, France",
+        "lon": -2.87984
+    },
+    {
+        "Address": "SUPER U SARZEAU",
+        "id": 34,
+        "lat": 47.5223369,
+        "loc": "Rte du Roaliguen, 56370 Sarzeau, France",
+        "lon": -2.7648388
+    },
+    {
+        "Address": "U EXPRESS VANNES",
+        "id": 35,
+        "lat": 47.6391645,
+        "loc": "4 Passage de Faréham, Zac De, Chem. de Cliscouët, 56000 Vannes, France",
+        "lon": -2.7763873
+    },
+    {
+        "Address": "SUPER U ARRADON",
+        "id": 36,
+        "lat": 47.6343842,
+        "loc": "Giratoire de la Bréche, 56610 Arradon, France",
+        "lon": -2.8211617
+    },
+    {
+        "Address": "SUPER U MALANSAC",
+        "id": 37,
+        "lat": 47.6687496,
+        "loc": "Parc d'Activités de la Chaussée, 56220 Malansac, France",
+        "lon": -2.3007165
+    },
+    {
+        "Address": "U EXPRESS REDON",
+        "id": 38,
+        "lat": 47.6522627,
+        "loc": "3 Rue de Fleurimont, 35600 Redon, France",
+        "lon": -2.0845907
+    },
+    {
+        "Address": "SUPER U MUZILLAC",
+        "id": 39,
+        "lat": 47.5598348,
+        "loc": "ZC Espace Littoral, Rue des Silènes, 56190 Ambon, France",
+        "lon": -2.5128456
+    },
+    {
+        "Address": "SUPER U ST-GILDAS-DES-BOIS",
+        "id": 40,
+        "lat": 47.5106865,
+        "loc": "Le Gue Joli, Rte de Pontchâteau, 44530 Saint-Gildas-des-Bois, France",
+        "lon": -2.0423585
+    },
+    {
+        "Address": "SUPER U LA TURBALLE",
+        "id": 41,
+        "lat": 47.3523264,
+        "loc": "2 Rue des Pins, 44420 La Turballe, France",
+        "lon": -2.5117697
+    },
+    {
+        "Address": "SUPER U ST-NAZAIRE",
+        "id": 42,
+        "lat": 47.279797,
+        "loc": "54 Rue Léon Bourgeois, 44600 Saint-Nazaire, France",
+        "lon": -2.228662
+    },
+    {
+        "Address": "SUPER U MONTOIR-DE-BRETAGNE",
+        "id": 43,
+        "lat": 47.3260919,
+        "loc": "Cc De La Bernuais, Av. François Miterrand, 44550 Montoir-de-Bretagne, France",
+        "lon": -2.1523296
+    },
+    {
+        "Address": "HYPER U SAVENAY",
+        "id": 44,
+        "lat": 47.3748879,
+        "loc": "44260 Savenay, France",
+        "lon": -1.9379525
+    },
+    {
+        "Address": "SUPER U HERIC",
+        "id": 45,
+        "lat": 47.4139972,
+        "loc": "51 Rue de l'Océan, 44810 Héric, France",
+        "lon": -1.6594795
+    },
+    {
+        "Address": "SUPER U NORT-SUR-ERDRE",
+        "id": 46,
+        "lat": 47.4412337,
+        "loc": "5 Rue de l'Erdre, 44390 Nort-sur-Erdre, France",
+        "lon": -1.4983054
+    },
+    {
+        "Address": "SUPER U LIGNÉ",
+        "id": 47,
+        "lat": 47.4139836,
+        "loc": "89 Rue du Souvenir, 44850 Ligné, France",
+        "lon": -1.3920655
+    },
+    {
+        "Address": "U EXPRESS MESANGER",
+        "id": 48,
+        "lat": 47.431583,
+        "loc": "185 Rue de la Vieille Cour, 44522 Mésanger, France",
+        "lon": -1.229673
+    },
+    {
+        "Address": "SUPER U ANCENIS",
+        "id": 49,
+        "lat": 47.37203,
+        "loc": "154 Rue Audigane, 44150 Ancenis, France",
+        "lon": -1.18354
+    },
+    {
+        "Address": "U EXPRESS ST-MARS-DU-DESERT",
+        "id": 50,
+        "lat": 47.3600655,
+        "loc": "2 Rue de Beau Soleil, 44850 Saint-Mars-du-Désert, France",
+        "lon": -1.4081491
+    },
+    {
+        "Address": "SUPER U TREILLIERES",
+        "id": 51,
+        "lat": 47.3327478,
+        "loc": "La Belle Etoile, Rue de Rennes, 44119 Treillières, France",
+        "lon": -1.6177774
+    },
+    {
+        "Address": "U EXPRESS VIGNEUX-DE-BRETAGNE",
+        "id": 52,
+        "lat": 47.3192182,
+        "loc": "46 Rue du Petit Prince, 44360 Vigneux-de-Bretagne, France",
+        "lon": -1.7399017
+    },
+    {
+        "Address": "SUPER U ST-ETIENNE-DE-MONTLUC",
+        "id": 53,
+        "lat": 47.2692124,
+        "loc": "24 Rte de Couëron, 44360 Saint-Étienne-de-Montluc, France",
+        "lon": -1.7738714
+    },
+    {
+        "Address": "SUPER U SAUTRON",
+        "id": 54,
+        "lat": 47.2618146,
+        "loc": "Le Moulin Brule, 20 Rue de Nantes, 44880 Sautron, France",
+        "lon": -1.6568158
+    },
+    {
+        "Address": "HYPER U LA CHAPELLE-SUR-ERDRE",
+        "id": 55,
+        "lat": 47.28435,
+        "loc": "Zac De La Berangerais, Centre Commercial Viv Erdre, Rue d'Utrecht, 44240 La Chapelle-sur-Erdre, France",
+        "lon": -1.55249
+    },
+    {
+        "Address": "SUPER U CARQUEFOU",
+        "id": 56,
+        "lat": 47.3006336,
+        "loc": "Route de Sucé Sur Erdre, Le Souchais, 44470 Carquefou, France",
+        "lon": -1.4993217
+    },
+    {
+        "Address": "SUPER U THOUARE-SUR-LOIRE",
+        "id": 57,
+        "lat": 47.2637447,
+        "loc": "Rue de la Malnoue, 44470 Thouaré-sur-Loire, France",
+        "lon": -1.4482976
+    },
+    {
+        "Address": "SUPER U LA CHAPELLE-BASSE-MER",
+        "id": 58,
+        "lat": 47.271643,
+        "loc": "La Chapelle-Basse-Mer, Divatte-sur-Loire, France",
+        "lon": -1.33891
+    },
+    {
+        "Address": "U EXPRESS HAUTE-GOULAINE",
+        "id": 59,
+        "lat": 47.1996074,
+        "loc": "9 Pl. Beau Soleil, 44115 Haute-Goulaine, France",
+        "lon": -1.4311827
+    },
+    {
+        "Address": "U EXPRESS STE-LUCE-SUR-LOIRE",
+        "id": 60,
+        "lat": 47.2498648,
+        "loc": "11 Pl. du Général de Gaulle, 44980 Sainte-Luce-sur-Loire, France",
+        "lon": -1.4838421
+    },
+    {
+        "Address": "U EXPRESS NANTES BEAUJOIRE",
+        "id": 61,
+        "lat": 47.258851,
+        "loc": "Zac De La Beaujoire, 36 Bd de la Beaujoire, 44300 Nantes, France",
+        "lon": -1.5190821
+    },
+    {
+        "Address": "SUPER U NANTES CHENAIE",
+        "id": 62,
+        "lat": 47.218371,
+        "loc": "Nantes, France",
+        "lon": -1.553621
+    },
+    {
+        "Address": "SUPER U NANTES DALBY",
+        "id": 63,
+        "lat": 47.218371,
+        "loc": "Nantes, France",
+        "lon": -1.553621
+    },
+    {
+        "Address": "U EXPRESS NANTES LAFAYETTE",
+        "id": 64,
+        "lat": 47.2536024,
+        "loc": "94 Rue de la Bourgeonnière, 44300 Nantes, France",
+        "lon": -1.5600434
+    },
+    {
+        "Address": "U EXPRESS NANTES PETIT PORT",
+        "id": 65,
+        "lat": 47.2536024,
+        "loc": "94 Rue de la Bourgeonnière, 44300 Nantes, France",
+        "lon": -1.5600434
+    },
+    {
+        "Address": "U EXPRESS ST-HERBLAIN BEAUSEJOUR",
+        "id": 66,
+        "lat": 47.2377965,
+        "loc": "Beausejour, 149 Rte de Vannes, 44800 Saint-Herblain, France",
+        "lon": -1.5874227
+    },
+    {
+        "Address": "U EXPRESS NANTES LELASSEUR",
+        "id": 67,
+        "lat": 47.23313,
+        "loc": "RESIDENCE CORNEILLE, 8 Bd Lelasseur, 44000 Nantes, France",
+        "lon": -1.56669
+    },
+    {
+        "Address": "U EXPRESS NANTES SCHUMAN",
+        "id": 68,
+        "lat": 47.2536024,
+        "loc": "94 Rue de la Bourgeonnière, 44300 Nantes, France",
+        "lon": -1.5600434
+    },
+    {
+        "Address": "SUPER U ST-SEBASTIEN-SUR-LOIRE",
+        "id": 69,
+        "lat": 47.2090358,
+        "loc": "76 Boulevard des Pas Enchantés, 44230 Saint-Sébastien-sur-Loire, France",
+        "lon": -1.5109012
+    },
+    {
+        "Address": "SUPER U NANTES ST JACQUES",
+        "id": 70,
+        "lat": 47.1942582,
+        "loc": "75 Bd Joliot Curie, 44200 Nantes, France",
+        "lon": -1.5303824
+    },
+    {
+        "Address": "SUPER U REZE GALARNIERE",
+        "id": 71,
+        "lat": 47.1769672,
+        "loc": "22 Rue de la Galarnière, 44400 Rezé, France",
+        "lon": -1.5593632
+    },
+    {
+        "Address": "U EXPRESS BOUGUENAIS",
+        "id": 72,
+        "lat": 47.18014,
+        "loc": "6 Rue de la Chapelle, 44340 Bouguenais, France",
+        "lon": -1.58785
+    },
+    {
+        "Address": "HYPER U LA MONTAGNE",
+        "id": 73,
+        "lat": 47.1774609,
+        "loc": "Zac La Montagne Plus, 8 Av. de la Libération, 44620 La Montagne, France",
+        "lon": -1.6777939
+    },
+    {
+        "Address": "SUPER U PONT-ST-MARTIN",
+        "id": 74,
+        "lat": 47.130086,
+        "loc": "Rue des Vignes, 44860 Pont-Saint-Martin, France",
+        "lon": -1.5811687
+    },
+    {
+        "Address": "SUPER U COUERON LA CHABOSSIERE",
+        "id": 75,
+        "lat": 47.2155482,
+        "loc": "La Chabossiere, 48 Bd de la Libération, 44220 Couëron, France",
+        "lon": -1.6848846
+    },
+    {
+        "Address": "SUPER U ST-HERBLAIN",
+        "id": 76,
+        "lat": 47.2106365,
+        "loc": "14 Rue du Lieutenant Mouillie, 44800 Saint-Herblain, France",
+        "lon": -1.6528015
+    },
+    {
+        "Address": "SUPER U VERTOU",
+        "id": 77,
+        "lat": 47.172599,
+        "loc": "Bd de l'Europe Cs 72422, 44120 Vertou, France",
+        "lon": -1.4764022
+    },
+    {
+        "Address": "SUPER U BOUAYE",
+        "id": 78,
+        "lat": 47.1427553,
+        "loc": "53 Rue de Nantes, 44830 Bouaye, France",
+        "lon": -1.6799968
+    },
+    {
+        "Address": "HYPER U VALLET",
+        "id": 79,
+        "lat": 47.16828,
+        "loc": "Rte d'Ancenis BP 22, 44330 Vallet, France",
+        "lon": -1.26877
+    },
+    {
+        "Address": "SUPER U PAIMBOEUF",
+        "id": 80,
+        "lat": 47.2840366,
+        "loc": "Rue des Floralies Et, Rue des Floralies, 44560 Paimbuf, France",
+        "lon": -2.0173946
+    },
+    {
+        "Address": "SUPER U ST-BREVIN-LES PINS",
+        "id": 81,
+        "lat": 47.2459982,
+        "loc": "Pl. Henri Basle, 44250 Saint-Brevin-les-Pins, France",
+        "lon": -2.163076
+    },
+    {
+        "Address": "U EXPRESS ST-PERE-EN-RETZ",
+        "id": 82,
+        "lat": 47.2032391,
+        "loc": "Centre Commerciale De L Iliade, Rue du Prieuré, 44320 Saint-Père-en-Retz, France",
+        "lon": -2.0479742
+    },
+    {
+        "Address": "SUPER U ST-MICHEL-CHEF-CHEF",
+        "id": 83,
+        "lat": 47.1716698,
+        "loc": "101 Bd de l'Océan, 44730 Saint-Michel-Chef-Chef, France",
+        "lon": -2.1649954
+    },
+    {
+        "Address": "SUPER U PORNIC OUEST",
+        "id": 84,
+        "lat": 47.115491,
+        "loc": "44210 Pornic, France",
+        "lon": -2.104444
+    },
+    {
+        "Address": "U EXPRESS PORNIC CENTRE",
+        "id": 85,
+        "lat": 47.1129387,
+        "loc": "48 Rue du Général de Gaulle, 44210 Pornic, France",
+        "lon": -2.0941057
+    },
+    {
+        "Address": "SUPER U ARTHON-EN-RETZ",
+        "id": 86,
+        "lat": 47.1146918,
+        "loc": "ZA Zone du Butai, 44320 Chaumes-en-Retz, France",
+        "lon": -1.9517343
+    },
+    {
+        "Address": "U EXPRESS BOURGNEUF-EN-RETZ",
+        "id": 87,
+        "lat": 47.04888,
+        "loc": "Chemin de la Culée, Rte de Pornic, 44580 Villeneuve-en-Retz, France",
+        "lon": -1.96032
+    },
+    {
+        "Address": "SUPER U BEAUVOIR-SUR-MER",
+        "id": 88,
+        "lat": 46.9112435,
+        "loc": "Rue des Sables, 85230 Beauvoir-sur-Mer, France",
+        "lon": -2.0484619
+    },
+    {
+        "Address": "U EXPRESS BARBATRE",
+        "id": 89,
+        "lat": 46.944922,
+        "loc": "26 Rue de la Cure, 85630 Barbâtre, France",
+        "lon": -2.1788771
+    },
+    {
+        "Address": "U EXPRESS NOIRMOUTIER PREE AUX DUCS",
+        "id": 90,
+        "lat": 47.000385,
+        "loc": "3 Rue de la Prée aux Ducs, 85330 Noirmoutier-en-l'Île, France",
+        "lon": -2.248171
+    },
+    {
+        "Address": "SUPER U NOIRMOUTIER L EPINE",
+        "id": 91,
+        "lat": 46.9917054,
+        "loc": "148 D948, Route Nationale, 85740 L'Épine, France",
+        "lon": -2.2477729
+    },
+    {
+        "Address": "U EXPRESS NOTRE-DAME-DE-MONTS",
+        "id": 92,
+        "lat": 46.8309355,
+        "loc": "Rte du Fief Noumois, 85690 Notre-Dame-de-Monts, France",
+        "lon": -2.1278973
+    },
+    {
+        "Address": "SUPER U ST-JEAN-DE-MONTS",
+        "id": 93,
+        "lat": 46.7946974,
+        "loc": "Route de Challans, Le Clos De, Rue de la Dechaume, 85160 Saint-Jean-de-Monts, France",
+        "lon": -2.0448605
+    },
+    {
+        "Address": "U EXPRESS LES MARINES-ST-HILAIRE",
+        "id": 94,
+        "lat": 46.749738,
+        "loc": "Les Marines, 85270 Saint-Hilaire-de-Riez, France",
+        "lon": -2.016465
+    },
+    {
+        "Address": "SUPER U L'ILE D'YEU",
+        "id": 95,
+        "lat": 46.727698,
+        "loc": "Rue du N, 85350 L'Île-d'Yeu, France",
+        "lon": -2.3555716
+    },
+    {
+        "Address": "HYPER U ST-HILAIRE-DE-RIEZ",
+        "id": 96,
+        "lat": 46.7124974,
+        "loc": "140 Av. de l'Isle de Riez, 85270 Saint-Hilaire-de-Riez, France",
+        "lon": -1.9624472
+    },
+    {
+        "Address": "SUPER U ST-GILLES-CROIX-DE-VIE",
+        "id": 97,
+        "lat": 46.6968748,
+        "loc": "1 Imp. de la Drie BP 444, 85800 Saint-Gilles-Croix-de-Vie, France",
+        "lon": -1.9266957
+    },
+    {
+        "Address": "U EXPRESS COMMEQUIERS",
+        "id": 98,
+        "lat": 46.760991,
+        "loc": "28 Rue Charles de Gaulle BP 4, 85220 Commequiers, France",
+        "lon": -1.8367356
+    },
+    {
+        "Address": "SUPER U BRETIGNOLLES-SUR-MER",
+        "id": 99,
+        "lat": 46.6260641,
+        "loc": "8 Av. de Verdun, 85470 Bretignolles-sur-Mer, France",
+        "lon": -1.8556913
+    },
+    {
+        "Address": "SUPER U OLONNE-SUR-MER",
+        "id": 100,
+        "lat": 46.5433036,
+        "loc": "73 Rue du 8 Mai 1945, 85340 Les Sables-d'Olonne, France",
+        "lon": -1.7722893
+    },
+    {
+        "Address": "SUPER U LES SABLES LA CHAUME",
+        "id": 101,
+        "lat": 46.495047,
+        "loc": "La Chaume, 85100 Les Sables-d'Olonne, France",
+        "lon": -1.808632
+    },
+    {
+        "Address": "SUPER U CHATEAU D'OLONNE",
+        "id": 102,
+        "lat": 46.4864271,
+        "loc": "15 Rue du Général Montcalm, 85180 Les Sables-d'Olonne, France",
+        "lon": -1.7476092
+    },
+    {
+        "Address": "SUPER U TALMONT-ST-HILAIRE",
+        "id": 103,
+        "lat": 46.4693456,
+        "loc": "86 Av. des Sables, 85440 Talmont-Saint-Hilaire, France",
+        "lon": -1.6275464
+    },
+    {
+        "Address": "SUPER U JARD-SUR-MER",
+        "id": 104,
+        "lat": 46.4230615,
+        "loc": "2A Rue de la Perpoise, 85520 Jard-sur-Mer, France",
+        "lon": -1.5757336
+    },
+    {
+        "Address": "SUPER U LA TRANCHE-SUR-MER",
+        "id": 105,
+        "lat": 46.3515571,
+        "loc": "Rue des Salins, Chem. du Vasais de Millet, 85360 La Tranche-sur-Mer, France",
+        "lon": -1.4307653
+    },
+    {
+        "Address": "SUPER U L'AIGUILLON-SUR-MER",
+        "id": 106,
+        "lat": 46.3320648,
+        "loc": "Rue des Marais, Route De, 85460 Saint-Michel-en-l'Herm, France",
+        "lon": -1.2912312
+    },
+    {
+        "Address": "SUPER U MARANS",
+        "id": 107,
+        "lat": 46.3135816,
+        "loc": "1 B Rue d'Aligre, 17230 Marans, France",
+        "lon": -0.9926349
+    },
+    {
+        "Address": "U EXPRESS MARSILLY",
+        "id": 108,
+        "lat": 46.2307713,
+        "loc": "Rue de l'Île de Houat Centre Commercial Les Carrelets, La Mothe Brulee, 17137 Marsilly, France",
+        "lon": -1.1348251
+    },
+    {
+        "Address": "SUPER U NIEUL-SUR-MER",
+        "id": 109,
+        "lat": 46.2028297,
+        "loc": "Zone Centre Commercial Fief Arnaud, Av. du Grand Large, 17137 Nieul-sur-Mer, France",
+        "lon": -1.1764398
+    },
+    {
+        "Address": "U EXPRESS DOMPIERRE-SUR-MER",
+        "id": 110,
+        "lat": 46.188289,
+        "loc": "1 Rue Adjudant Galland, 17139 Dompierre-sur-Mer, France",
+        "lon": -1.0684715
+    },
+    {
+        "Address": "HYPER U LA ROCHELLE",
+        "id": 111,
+        "lat": 46.160329,
+        "loc": "La Rochelle, France",
+        "lon": -1.151139
+    },
+    {
+        "Address": "SUPER U ST-ROGATIEN",
+        "id": 112,
+        "lat": 46.1498507,
+        "loc": "1, BIS Rte de la Jarne, 17220 Saint-Rogatien, France",
+        "lon": -1.0757751
+    },
+    {
+        "Address": "U EXPRESS LA ROCHELLE MIREUIL",
+        "id": 113,
+        "lat": 46.1672413,
+        "loc": "U EXPRESS LA ROCHELLE MIREUIL, Pl. de l'Europe, 17000 La Rochelle, France",
+        "lon": -1.1796225
+    },
+    {
+        "Address": "U EXPRESS LA ROCHELLE PORT NEUF",
+        "id": 114,
+        "lat": 46.160329,
+        "loc": "La Rochelle, France",
+        "lon": -1.151139
+    },
+    {
+        "Address": "U EXPRESS RIVEDOUX PLAGE",
+        "id": 115,
+        "lat": 46.1585726,
+        "loc": "360 Av. Gustave Perreau, 17940 Rivedoux-Plage, France",
+        "lon": -1.2686082
+    },
+    {
+        "Address": "U EXPRESS ARS-EN-RÉ",
+        "id": 116,
+        "lat": 46.206771,
+        "loc": "35 Rue de la Diète, 17590 Ars-en-Ré, France",
+        "lon": -1.5211988
+    },
+    {
+        "Address": "SUPER U FOURAS",
+        "id": 117,
+        "lat": 45.9908838,
+        "loc": "9 Rue Dieu Me Garde, 17450 Fouras, France",
+        "lon": -1.0770392
+    },
+    {
+        "Address": "SUPER U ECHILLAIS",
+        "id": 118,
+        "lat": 45.9056011,
+        "loc": "Rue de la Pouline, 17620 Échillais, France",
+        "lon": -0.9634695
+    },
+    {
+        "Address": "SUPER U TONNAY-CHARENTE",
+        "id": 119,
+        "lat": 45.951522,
+        "loc": "Zone Artisanale Les Varennes, Rue Louis Pasteur, 17430 Tonnay-Charente, France",
+        "lon": -0.898076
+    },
+    {
+        "Address": "SUPER U ST-SAVINIEN",
+        "id": 120,
+        "lat": 45.8715027,
+        "loc": "2 Rue Fond Boulet, 17350 Saint-Savinien, France",
+        "lon": -0.6689959
+    },
+    {
+        "Address": "HYPER U SAINTES",
+        "id": 121,
+        "lat": 45.7534878,
+        "loc": "Cr du Maréchal Leclerc, 17100 Saintes, France",
+        "lon": -0.6510386
+    },
+    {
+        "Address": "U EXPRESS COGNAC BAYARD B.",
+        "id": 122,
+        "lat": 45.69220734659968,
+        "loc": "32 Pl. Bayard, 16100, Cognac",
+        "lon": -0.32757500223089
+    },
+    {
+        "Address": "U EXPRESS GRAND-VILLAGE",
+        "id": 123,
+        "lat":45.86114692316582,
+        "loc": "Centre Commercial, All. des Cagouilles, 17370 Le Grand-Village-Plage",
+        "lon": -1.2400197598968166
+    },
+    {
+        "Address": "SUPER U LE CHATEAU-D'OLERON",
+        "id": 124,
+        "lat": 45.887049,
+        "loc": "15 Av. d'Antioche, 17480 Le Château-d'Oléron, France",
+        "lon": -1.203323
+    },
+    {
+        "Address": "SUPER U ST-PIERRE-OLERON",
+        "id": 125,
+        "lat": 45.942759,
+        "loc": "17310 Saint-Pierre-d'Oléron, France",
+        "lon": -1.307189
+    },
+    {
+        "Address": "U EXPRESS ST-DENIS-D OLERON",
+        "id": 126,
+        "lat": 46.033306,
+        "loc": "17650 Saint-Denis-d'Oléron, France",
+        "lon": -1.379923
+    },
+    {
+        "Address": "U EXPRESS LA TREMBLADE",
+        "id": 127,
+        "lat": 45.769835,
+        "loc": "14 Bd Pasteur, 17390 La Tremblade, France",
+        "lon": -1.1418159
+    },
+    {
+        "Address": "SUPER U ARVERT",
+        "id": 128,
+        "lat": 45.755556,
+        "loc": "MOULIN JUSTICES, 107 Av. de l'Etrade, 17530 Arvert, France",
+        "lon": -1.1399544
+    },
+    {
+        "Address": "SUPER U SAUJON",
+        "id": 129,
+        "lat": 45.6796825,
+        "loc": "9 Rte de Saintes, 17600 Saujon, France",
+        "lon": -0.9142991
+    },
+    {
+        "Address": "SUPER U ST-PALAIS-SUR-MER",
+        "id": 130,
+        "lat": 45.6514775,
+        "loc": "Av. Charles de Gaulle, 17420 Saint-Palais-sur-Mer, France",
+        "lon": -1.0865054
+    },
+    {
+        "Address": "U EXPRESS VAUX-SUR-MER",
+        "id": 131,
+        "lat": 45.6364331,
+        "loc": "Av. des Hautes Folies, 17640 Vaux-sur-Mer, France",
+        "lon": -1.0636966
+    },
+    {
+        "Address": "SUPER U ROYAN",
+        "id": 132,
+        "lat": 45.6294506,
+        "loc": "SUPER U, Bd du Colonel Robert Baillet, 17200 Royan, France",
+        "lon": -1.0380853
+    },
+    {
+        "Address": "U EXPRESS ROYAN LES TILLEULS",
+        "id": 133,
+        "lat": 45.623027,
+        "loc": "17200 Royan, France",
+        "lon": -1.043182
+    },
+    {
+        "Address": "SUPER U ST-GEORGES-DE-DIDONNE",
+        "id": 134,
+        "lat": 45.6136669,
+        "loc": "68 Av. du Maréchal Juin, 17110 Saint-Georges-de-Didonne, France",
+        "lon": -0.9902061
+    },
+    {
+        "Address": "U EXPRESS ST-GEORGES-DE-DIDONNE",
+        "id": 135,
+        "lat": 45.603804,
+        "loc": "U EXPRESS, 4 Rue Carnot, 17110 Saint-Georges-de-Didonne, France",
+        "lon": -0.996961
+    },
+    {
+        "Address": "U EXPRESS SEMUSSAC",
+        "id": 136,
+        "lat": 45.6037625,
+        "loc": "LE PRE CHARDON, 1 ZA, 17120 Semussac, France",
+        "lon": -0.9134192
+    },
+    {
+        "Address": "SUPER U COZES",
+        "id": 137,
+        "lat": 45.5846239,
+        "loc": "8 Rue des Chênes, 17120 Cozes, France",
+        "lon": -0.8361052
+    },
+    {
+        "Address": "U EXPRESS MESCHERS",
+        "id": 138,
+        "lat": 45.5587374,
+        "loc": "47 Rue de l'Église, 17132 Meschers-sur-Gironde, France",
+        "lon": -0.9558871
+    },
+    {
+        "Address": "SUPER U CAVIGNAC",
+        "id": 139,
+        "lat": 45.0951314,
+        "loc": "Avenue de Paris, Le Bourg, 33620 Cavignac, France",
+        "lon": -0.3856909
+    },
+    {
+        "Address": "SUPER U GALGON",
+        "id": 140,
+        "lat": 44.9933259,
+        "loc": "2 Av. Fernand Pillot, 33133 Galgon, France",
+        "lon": -0.2746081
+    },
+    {
+        "Address": "SUPER U ST SULPICE ET CAMEYRAC",
+        "id": 141,
+        "lat": 44.912886,
+        "loc": "Centre Commercial, 17 Av. Lagraula, 33450 Saint-Sulpice-et-Cameyrac, France",
+        "lon": -0.3911306
+    },
+    {
+        "Address": "U EXPRESS AMBARES",
+        "id": 142,
+        "lat": 44.9262204,
+        "loc": "1 Rue Edouard Herriot, 33440 Ambarès-et-Lagrave, France",
+        "lon": -0.4867046
+    },
+    {
+        "Address": "SUPER U BASSENS",
+        "id": 143,
+        "lat": 44.9018662,
+        "loc": "7 Rue Camille Jullian, 33530 Bassens, France",
+        "lon": -0.5084459
+    },
+    {
+        "Address": "SUPER U FARGUES ST HILAIRE",
+        "id": 144,
+        "lat": 44.8258424,
+        "loc": "Val Laurence, Rte Bois Menu, 33370 Fargues-Saint-Hilaire, France",
+        "lon": -0.4438619
+    },
+    {
+        "Address": "SUPER U CAMBLANES",
+        "id": 145,
+        "lat": 44.7652981,
+        "loc": "4 Rte de Morillon, 33360 Camblanes-et-Meynac, France",
+        "lon": -0.4846305
+    },
+    {
+        "Address": "SUPER U PODENSAC",
+        "id": 146,
+        "lat": 44.6548444,
+        "loc": "Cours du Mal Foch, Centre commercial Super U, N113, 33720 Podensac, France",
+        "lon": -0.3661273
+    },
+    {
+        "Address": "U EXPRESS LANGON MAG",
+        "id": 147,
+        "lat": 44.554328,
+        "loc": "12 Cr Gambetta, 33210 Langon, France",
+        "lon": -0.2533611
+    },
+    {
+        "Address": "SUPER U BAZAS",
+        "id": 148,
+        "lat": 44.430624,
+        "loc": "33430 Bazas, France",
+        "lon": -0.211464
+    },
+    {
+        "Address": "U EXPRESS LEOGNAN",
+        "id": 149,
+        "lat": 44.7328943,
+        "loc": "2 Av. de Bordeaux, 33850 Léognan, France",
+        "lon": -0.5989266
+    },
+    {
+        "Address": "SUPER U CESTAS",
+        "id": 150,
+        "lat": 44.7392312,
+        "loc": "CENTRE COMMERCIAL LE BOURG, BP 19, 33611 Cestas CEDEX, France",
+        "lon": -0.6799153
+    },
+    {
+        "Address": "SUPER U EYSINES",
+        "id": 151,
+        "lat": 44.8920486,
+        "loc": "3 All. de l'Europe, 33320 Eysines, France",
+        "lon": -0.6664629
+    },
+    {
+        "Address": "U EXPRESS BORDEAUX STE CATHERINE",
+        "id": 152,
+        "lat": 44.8374934,
+        "loc": "3 Rue Ravez, 33000 Bordeaux, France",
+        "lon": -0.5729999
+    },
+    {
+        "Address": "U EXPRESS BORDEAUX CAPUCINS",
+        "id": 153,
+        "lat": 44.8374934,
+        "loc": "3 Rue Ravez, 33000 Bordeaux, France",
+        "lon": -0.5729999
+    },
+    {
+        "Address": "U EXPRESS BORDEAUX NANSOUTY",
+        "id": 154,
+        "lat": 44.8194377,
+        "loc": "Nansouty, Bordeaux, France",
+        "lon": -0.5723033
+    },
+    {
+        "Address": "U EXPRESS BORDEAUX BELCIER",
+        "id": 155,
+        "lat": 44.8222643,
+        "loc": "All. Eugène Delacroix, 33800 Bordeaux, France",
+        "lon": -0.5521056
+    },
+    {
+        "Address": "SUPER U ST LAURENT MEDOC",
+        "id": 156,
+        "lat": 45.1470578,
+        "loc": "18 Rue Pierre Ralle, 33112 Saint-Laurent-Médoc, France",
+        "lon": -0.8224238
+    },
+    {
+        "Address": "U EXPRESS LACANAU OCEAN",
+        "id": 157,
+        "lat": 45.0044883,
+        "loc": "4 Rue Alexandre Dumas, 33680 Lacanau, France",
+        "lon": -1.1984557
+    },
+    {
+        "Address": "SUPER U LACANAU",
+        "id": 158,
+        "lat": 44.9774418,
+        "loc": "LIEU DIT LE BASTA, 31 Av. de Bordeaux 27, 33680 Lacanau, France",
+        "lon": -1.0656454
+    },
+    {
+        "Address": "SUPER U CLAOUEY LEGE",
+        "id": 159,
+        "lat": 44.746508,
+        "loc": "Claouey, 33950 Lège-Cap-Ferret, France",
+        "lon": -1.179861
+    },
+    {
+        "Address": "U EXPRESS LE BARP",
+        "id": 160,
+        "lat": 44.6222195,
+        "loc": "Zac Eyrialis, Av. du Médoc, 33114 Le Barp, France",
+        "lon": -0.786956
+    },
+    {
+        "Address": "SUPER U BELIN BELIET",
+        "id": 161,
+        "lat": 44.50126,
+        "loc": "10 Av. Plantagenêt, 33830 Belin-Béliet, France",
+        "lon": -0.78759
+    },
+    {
+        "Address": "U EXPRESS LE TEICH",
+        "id": 162,
+        "lat": 44.6229149,
+        "loc": "Av. de Bordeaux, 33470 Le Teich, France",
+        "lon": -1.0260087
+    },
+    {
+        "Address": "HYPER U GUJAN MESTRAS",
+        "id": 163,
+        "lat": 44.6171465,
+        "loc": "Centre Commercial Grand Large, Av. de Césarée, 33470 Gujan-Mestras, France",
+        "lon": -1.0761139
+    },
+    {
+        "Address": "SUPER U BISCARROSSE",
+        "id": 164,
+        "lat": 44.3903403,
+        "loc": "Rue Marcel Pagnol Route de Parentis, 40600 Biscarrosse, France",
+        "lon": -1.1619516
+    },
+    {
+        "Address": "SUPER U PARENTIS EN BORN",
+        "id": 165,
+        "lat": 44.3477091,
+        "loc": "606 Av. Brémontier, 40160 Parentis-en-Born, France",
+        "lon": -1.066379
+    }
+]
+}
