@@ -11,6 +11,7 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="21">@color/arvag_purp</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">@color/arvag_purp</item>
         <!-- Customize your theme here. -->
     </style>
 
@@ -19,6 +20,9 @@
         <item name="android:windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
+        <item name="android:statusBarColor" tools:targetApi="21">@color/arvag_purp</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">@color/arvag_purp</item>
+
     </style>
 
     <style name="Theme.Arvag.Fullscreen" parent="Theme.Arvag">
