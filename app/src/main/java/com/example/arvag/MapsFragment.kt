@@ -32,7 +32,6 @@ import java.nio.charset.Charset
 import kotlin.properties.Delegates
 
 class MapsFragment : Fragment() {
-    private lateinit var myToolbar:Toolbar
     private lateinit var lastLocation: android.location.Location
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     companion object{
