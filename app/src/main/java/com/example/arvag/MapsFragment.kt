@@ -1,23 +1,15 @@
 package com.example.arvag
 
 import android.Manifest
-import android.content.Context
-import android.content.Context.LOCATION_SERVICE
 import android.content.pm.PackageManager
-import android.location.LocationManager
-import android.location.LocationRequest
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
-import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
@@ -29,9 +21,9 @@ import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
 import java.nio.charset.Charset
-import kotlin.properties.Delegates
 
 class MapsFragment : Fragment() {
+
     private lateinit var lastLocation: android.location.Location
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     companion object{
@@ -103,8 +95,8 @@ class MapsFragment : Fragment() {
         mapFragment?.getMapAsync(callback)
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
 
-
     }
+
 
     fun getJSONFromAssets(fileName: String): String? {
 
