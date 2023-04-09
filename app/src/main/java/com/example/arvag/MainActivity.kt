@@ -1,89 +1,83 @@
 package com.example.arvag
 
-import android.content.ContentValues.TAG
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
 import android.widget.Toast
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import com.example.arvag.databinding.ActivityMainBinding
-import com.google.android.gms.common.util.WorkSourceUtil.add
 
-/*
 private val acceuilFragment = AcceuilFragment()
 private val rechercheFragment = RechercheFragment()
 private val wishlistFragment = WishlistFragment()
 private val projetFragment = ProjetFragment()
 private val mapsFragment = MapsFragment()
-*/
-
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
 
     private var doubleBackToExitPressedOnce = false
 
-    private lateinit var nextFragment:Fragment
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+
+    private val fragmentManager = supportFragmentManager
+
+    private var activeFragment: Fragment = acceuilFragment
+
+
+        override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        if (savedInstanceState != null){
-            nextFragment = supportFragmentManager.getFragment(savedInstanceState, "CurrentFragment")!!
-        } else{
-            nextFragment = AcceuilFragment()
-        }
-        replaceFragment(nextFragment)
+            supportFragmentManager.beginTransaction().apply {
+                add(R.id.frame_layout, acceuilFragment, getString(R.string.accueil))
+                add(R.id.frame_layout, rechercheFragment, getString(R.string.recherche)).hide(rechercheFragment)
+                add(R.id.frame_layout, wishlistFragment, getString(R.string.wishlist)).hide(wishlistFragment)
+                add(R.id.frame_layout, projetFragment, getString(R.string.projet)).hide(projetFragment)
+                add(R.id.frame_layout, mapsFragment, getString(R.string.maps)).hide(mapsFragment)
+            }.commit()
+
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.acceuil -> {
-                    nextFragment = AcceuilFragment()
+                    fragmentManager.beginTransaction().hide(activeFragment).show(acceuilFragment).commit()
+                    activeFragment = acceuilFragment
+                    true
                 }
                 R.id.autour_de_moi -> {
-                    nextFragment = MapsFragment()
+                    fragmentManager.beginTransaction().hide(activeFragment).show(mapsFragment).commit()
+                    activeFragment = mapsFragment
+                    true
                 }
                 R.id.ma_wishlist -> {
-                    nextFragment = WishlistFragment()
+                    fragmentManager.beginTransaction().hide(activeFragment).show(wishlistFragment).commit()
+                    activeFragment = wishlistFragment
+                    true
                 }
                 R.id.recherche -> {
-                    nextFragment = RechercheFragment()
+                    fragmentManager.beginTransaction().hide(activeFragment).show(rechercheFragment).commit()
+                    activeFragment = rechercheFragment
+                    true
                 }
                 R.id.projet_et_partenaires -> {
-                    nextFragment = ProjetFragment()
+                    fragmentManager.beginTransaction().hide(activeFragment).show(projetFragment).commit()
+                    activeFragment = projetFragment
+                    true
                 }
+                else -> false
             }
-            replaceFragment(nextFragment)
-            true
         }
 
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        supportFragmentManager.putFragment(outState, "CurrentFragment", nextFragment);    }
-
-
+    @Suppress("DEPRECATION")
     override fun onBackPressed() {
         doubleBackToExit()
     }
 
-
-    private fun replaceFragment(fragment: Fragment){
-
-            val fragmentManager = supportFragmentManager
-            val fragmentTransaction = fragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.frame_layout, fragment)
-            fragmentTransaction.commit()
-
-    }
-
-
+    @Suppress("DEPRECATION")
     private fun doubleBackToExit(){
         if (doubleBackToExitPressedOnce){
             super.onBackPressed()

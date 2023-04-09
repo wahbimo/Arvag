@@ -22,6 +22,8 @@ import org.json.JSONObject
 import java.io.IOException
 import java.nio.charset.Charset
 
+
+
 class MapsFragment : Fragment() {
 
     private lateinit var lastLocation: android.location.Location
@@ -32,7 +34,6 @@ class MapsFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.N)
     private val callback = OnMapReadyCallback { googleMap ->
         try {
-
             setUpMap(googleMap)
             googleMap.uiSettings.setZoomControlsEnabled(true)
             // As we have JSON object, so we are getting the object
@@ -65,37 +66,49 @@ class MapsFragment : Fragment() {
 
             val bounds = LatLngBounds.builder()
 
-            ((locationsListSuperU.plus(locationsListBiocoop)).plus(locationsListBelleIloise)).forEach { bounds.include(it.position) }
+            ((locationsListSuperU.plus(locationsListBiocoop)).plus(locationsListBelleIloise)).forEach {
+                bounds.include(
+                    it.position
+                )
+            }
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds.build(), 1000,1600,150))
 
-            googleMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds.build(), 150))
+            addClusteredMarkers(
+                googleMap,
+                (locationsListSuperU.plus(locationsListBiocoop)).plus(locationsListBelleIloise) as ArrayList<LocationItem>
+            )
 
-            addClusteredMarkers(googleMap, (locationsListSuperU.plus(locationsListBiocoop)).plus(locationsListBelleIloise) as ArrayList<LocationItem>)
             //googleMap.setOnMapLoadedCallback {}
 
         } catch (e: JSONException) {
             //exception
             e.printStackTrace()
         }
-
-
     }
+
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         return inflater.inflate(R.layout.fragment_voisinage, container, false)
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
+        var mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
         mapFragment?.getMapAsync(callback)
+
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
 
     }
+
+
 
 
     fun getJSONFromAssets(fileName: String): String? {

@@ -10,7 +10,6 @@
         android:id="@+id/include"
         layout="@layout/mytoolbar" />
 
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
