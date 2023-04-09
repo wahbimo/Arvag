@@ -1,10 +1,11 @@
-package com.example.arvag
+package com.example.arvag.maps_compnanions
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
+import com.example.arvag.R
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.Marker
 
@@ -24,7 +25,7 @@ class MarkerInfoWindowAdapter(
             R.id.text_view_title
         ).text = place.Address
         view.findViewById<TextView>(
-          R.id.text_view_address
+            R.id.text_view_address
         ).text = place.loc
 
         return view

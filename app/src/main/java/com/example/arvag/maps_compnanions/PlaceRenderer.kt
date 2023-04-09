@@ -1,7 +1,9 @@
-package com.example.arvag
+package com.example.arvag.maps_compnanions
 
 import android.content.Context
 import androidx.core.content.ContextCompat
+import com.example.arvag.BitmapHelper
+import com.example.arvag.R
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.BitmapDescriptor
 import com.google.android.gms.maps.model.Marker
@@ -22,7 +24,7 @@ class PlaceRenderer(
      * The icon to use for each cluster item
      */
     private val ic: BitmapDescriptor by lazy {
-        val color = ContextCompat.getColor(context,R.color.arvag_purp)
+        val color = ContextCompat.getColor(context, R.color.arvag_purp)
         BitmapHelper.vectorToBitmap(
             context,
             R.drawable.baseline_shopping_cart_24,

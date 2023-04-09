@@ -1,4 +1,4 @@
-package com.example.arvag
+package com.example.arvag.maps_compnanions
 
 import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.clustering.ClusterItem

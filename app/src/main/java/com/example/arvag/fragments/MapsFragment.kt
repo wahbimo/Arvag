@@ -1,4 +1,4 @@
-package com.example.arvag
+package com.example.arvag.fragments
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -11,6 +11,11 @@ import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.example.arvag.*
+import com.example.arvag.R
+import com.example.arvag.maps_compnanions.LocationItem
+import com.example.arvag.maps_compnanions.MarkerInfoWindowAdapter
+import com.example.arvag.maps_compnanions.PlaceRenderer
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.*
@@ -202,7 +207,8 @@ class MapsFragment : Fragment() {
             ) != PackageManager.PERMISSION_GRANTED)
         {
         ActivityCompat.requestPermissions(requireActivity(), arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
-            LOCATION_REQUEST_CODE)
+            LOCATION_REQUEST_CODE
+        )
             return
         }
 

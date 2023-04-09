@@ -1,11 +1,13 @@
-package com.example.arvag
+package com.example.arvag.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.arvag.*
 import com.example.arvag.databinding.ActivityMainBinding
+import com.example.arvag.fragments.*
 
 private val acceuilFragment = AcceuilFragment()
 private val rechercheFragment = RechercheFragment()
@@ -32,9 +34,15 @@ class MainActivity : AppCompatActivity() {
 
             supportFragmentManager.beginTransaction().apply {
                 add(R.id.frame_layout, acceuilFragment, getString(R.string.accueil))
-                add(R.id.frame_layout, rechercheFragment, getString(R.string.recherche)).hide(rechercheFragment)
-                add(R.id.frame_layout, wishlistFragment, getString(R.string.wishlist)).hide(wishlistFragment)
-                add(R.id.frame_layout, projetFragment, getString(R.string.projet)).hide(projetFragment)
+                add(R.id.frame_layout, rechercheFragment, getString(R.string.recherche)).hide(
+                    rechercheFragment
+                )
+                add(R.id.frame_layout, wishlistFragment, getString(R.string.wishlist)).hide(
+                    wishlistFragment
+                )
+                add(R.id.frame_layout, projetFragment, getString(R.string.projet)).hide(
+                    projetFragment
+                )
                 add(R.id.frame_layout, mapsFragment, getString(R.string.maps)).hide(mapsFragment)
             }.commit()
 
@@ -95,8 +103,3 @@ class MainActivity : AppCompatActivity() {
         Handler().postDelayed({doubleBackToExitPressedOnce = false},2000)
     }
 }
-
-
-
-
-

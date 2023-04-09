@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RechercheFragment"
+    tools:context=".fragments.RechercheFragment"
     android:background="@color/light_blue_600">
 
 
