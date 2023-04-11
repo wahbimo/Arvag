@@ -54,6 +54,7 @@ class MainActivity : AppCompatActivity() {
                     activeFragment = mapsFragment
                     true
                 }
+                //test
                 R.id.wishlist -> {
                     fragmentManager.beginTransaction().hide(activeFragment).show(wishlistFragment).commit()
                     activeFragment = wishlistFragment
