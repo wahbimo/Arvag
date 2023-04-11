@@ -9,7 +9,7 @@ import com.example.arvag.*
 import com.example.arvag.databinding.ActivityMainBinding
 import com.example.arvag.fragments.*
 
-private val acceuilFragment = AcceuilFragment()
+private val accueilFragment = AccueilFragment()
 private val rechercheFragment = RechercheFragment()
 private val wishlistFragment = WishlistFragment()
 private val projetFragment = ProjetFragment()
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     private val fragmentManager = supportFragmentManager
 
-    private var activeFragment: Fragment = acceuilFragment
+    private var activeFragment: Fragment = accueilFragment
 
 
         override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,33 +33,28 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
             supportFragmentManager.beginTransaction().apply {
-                add(R.id.frame_layout, acceuilFragment, getString(R.string.accueil))
-                add(R.id.frame_layout, rechercheFragment, getString(R.string.recherche)).hide(
-                    rechercheFragment
-                )
-                add(R.id.frame_layout, wishlistFragment, getString(R.string.wishlist)).hide(
-                    wishlistFragment
-                )
-                add(R.id.frame_layout, projetFragment, getString(R.string.projet)).hide(
-                    projetFragment
-                )
+                add(R.id.frame_layout, accueilFragment, getString(R.string.accueil)).hide(accueilFragment)
+                add(R.id.frame_layout, rechercheFragment, getString(R.string.recherche)).hide(rechercheFragment)
+                add(R.id.frame_layout, wishlistFragment, getString(R.string.wishlist)).hide(wishlistFragment)
+                add(R.id.frame_layout, projetFragment, getString(R.string.projet)).hide(projetFragment)
                 add(R.id.frame_layout, mapsFragment, getString(R.string.maps)).hide(mapsFragment)
             }.commit()
 
+            fragmentManager.beginTransaction().show(activeFragment).commit()
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
-                R.id.acceuil -> {
-                    fragmentManager.beginTransaction().hide(activeFragment).show(acceuilFragment).commit()
-                    activeFragment = acceuilFragment
+                R.id.accueil -> {
+                    fragmentManager.beginTransaction().hide(activeFragment).show(accueilFragment).commit()
+                    activeFragment = accueilFragment
                     true
                 }
-                R.id.autour_de_moi -> {
+                R.id.voisinage -> {
                     fragmentManager.beginTransaction().hide(activeFragment).show(mapsFragment).commit()
                     activeFragment = mapsFragment
                     true
                 }
-                R.id.ma_wishlist -> {
+                R.id.wishlist -> {
                     fragmentManager.beginTransaction().hide(activeFragment).show(wishlistFragment).commit()
                     activeFragment = wishlistFragment
                     true
@@ -69,7 +64,7 @@ class MainActivity : AppCompatActivity() {
                     activeFragment = rechercheFragment
                     true
                 }
-                R.id.projet_et_partenaires -> {
+                R.id.projet -> {
                     fragmentManager.beginTransaction().hide(activeFragment).show(projetFragment).commit()
                     activeFragment = projetFragment
                     true

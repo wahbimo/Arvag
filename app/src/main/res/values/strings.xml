@@ -13,5 +13,11 @@
     <string name="projet">Projet</string>
     <string name="maps">Maps</string>
 
+    <string name="acc">ACCUEIL</string>
+    <string name="rech">RECHERCHE</string>
+    <string name="wish">WISHLIST</string>
+    <string name="pro">PROJET</string>
+    <string name="map">VOISINAGE</string>
+
 
 </resources>

@@ -2,25 +2,25 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/acceuil"
+        android:id="@+id/accueil"
         android:icon="@drawable/baseline_home_24"
-        android:title="ACCEUIL"
+        android:title="@string/acc"
         />
 
     <item
         android:id="@+id/recherche"
         android:icon="@drawable/baseline_search_24"
-        android:title="RECHERCHE" />
+        android:title="@string/rech" />
     <item
-        android:id="@+id/autour_de_moi"
+        android:id="@+id/voisinage"
         android:icon="@drawable/baseline_location_on_24"
-        android:title="VOISINAGE" />
+        android:title="@string/map" />
     <item
-        android:id="@+id/projet_et_partenaires"
+        android:id="@+id/projet"
         android:icon="@drawable/hand_hold_tree"
-        android:title="PROJET" />
+        android:title="@string/pro" />
 
-    <item android:title="WISHLIST"
+    <item android:title="@string/wish"
         android:icon="@drawable/wishlist"
-        android:id="@+id/ma_wishlist"/>
+        android:id="@+id/wishlist"/>
 </menu>
