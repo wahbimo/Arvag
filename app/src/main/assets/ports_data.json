@@ -1,0 +1,277 @@
+{
+    "ports": [
+        {
+            "Address": "port de Ancenis",
+            "id": 1,
+            "lat": 47.365464,
+            "loc": "Ancenis, 44150 Ancenis-Saint-G�r�on, France",
+            "lon": -1.177491
+        },
+        {
+            "Address": "port de arcachon",
+            "id": 2,
+            "lat": 44.6623419,
+            "loc": "Quai Goslar, 33120 Arcachon, France",
+            "lon": -1.1510643
+        },
+        {
+            "Address": "port de Arzal",
+            "id": 3,
+            "lat": 47.5166899,
+            "loc": "56190 Arzal, France",
+            "lon": -2.376187
+        },
+        {
+            "Address": "port de Audierne",
+            "id": 4,
+            "lat": 48.0229295,
+            "loc": "Audierne, 29770 Audierne, France",
+            "lon": -4.544276
+        },
+        {
+            "Address": "port de Auray",
+            "id": 5,
+            "lat": 47.666491,
+            "loc": "56400 Auray, France",
+            "lon": -2.983767
+        },
+        {
+            "Address": "port de Blaye",
+            "id": 6,
+            "lat": 45.126841,
+            "loc": "33390 Blaye, France",
+            "lon": -0.662941
+        },
+        {
+            "Address": "port de bordeaux",
+            "id": 7,
+            "lat": 44.9099399,
+            "loc": "Quai Alfred de Vial, 33530 Bassens, France",
+            "lon": -0.5358774
+        },
+        {
+            "Address": "port de Brest",
+            "id": 8,
+            "lat": 48.3856807,
+            "loc": "1 Rue de Kiel, 29200 Brest, France",
+            "lon": -4.4697888
+        },
+        {
+            "Address": "port de carquefou",
+            "id": 9,
+            "lat": 47.303136,
+            "loc": "Port Jean, 44470, 44470 Carquefou, France",
+            "lon": -1.5241374
+        },
+        {
+            "Address": "port de cognac",
+            "id": 10,
+            "lat": 45.6940297,
+            "loc": "56 Rue du Port, 16100 Cognac, France",
+            "lon": -0.3344411
+        },
+        {
+            "Address": "port de Concarneau",
+            "id": 11,
+            "lat": 47.8771684,
+            "loc": "1 Quai du Moros _, Rive Gauche, 29900 Concarneau, France",
+            "lon": -3.9054218
+        },
+        {
+            "Address": "port de Cordemais",
+            "id": 12,
+            "lat": 47.291429,
+            "loc": "44360 Cordemais, France",
+            "lon": -1.876729
+        },
+        {
+            "Address": "port de Douarnenez",
+            "id": 13,
+            "lat": 48.0984709,
+            "loc": "Terre-Plein du Port, 29100 Douarnenez, France",
+            "lon": -4.3261969
+        },
+        {
+            "Address": "port de Guilvinec",
+            "id": 14,
+            "lat": 47.797213,
+            "loc": "29730 Guilvinec, France",
+            "lon": -4.284075
+        },
+        {
+            "Address": "port de La rochelle",
+            "id": 15,
+            "lat": 46.1484792,
+            "loc": "55 Digue du Bout Blanc, 17000 La Rochelle, France",
+            "lon": -1.1636925
+        },
+        {
+            "Address": "port de Landerneau",
+            "id": 16,
+            "lat": 48.450821,
+            "loc": "29800 Landerneau, France",
+            "lon": -4.248437
+        },
+        {
+            "Address": "port de Langon",
+            "id": 17,
+            "lat": 44.555419,
+            "loc": "33210 Langon, France",
+            "lon": -0.245126
+        },
+        {
+            "Address": "port de Le croisic",
+            "id": 18,
+            "lat": 47.294319,
+            "loc": "Le Croisic, France",
+            "lon": -2.511908
+        },
+        {
+            "Address": "port de Le palais",
+            "id": 19,
+            "lat": 47.3470687,
+            "loc": "Quai Bonnelle, 56360 Le Palais, France",
+            "lon": -3.1536257
+        },
+        {
+            "Address": "port de Le pallet",
+            "id": 20,
+            "lat": 47.139777,
+            "loc": "44330 Le Pallet, France",
+            "lon": -1.337189
+        },
+        {
+            "Address": "port de Les Sables",
+            "id": 21,
+            "lat": 46.492958,
+            "loc": "Les Sables-d'Olonne, France",
+            "lon": -1.795493
+        },
+        {
+            "Address": "port de l'herbaudi�re",
+            "id": 22,
+            "lat": 47.02556716,
+            "loc": "Port de l'Herbaudi�re, France",
+            "lon": -2.298377004
+        },
+        {
+            "Address": "port de libourne",
+            "id": 23,
+            "lat": 44.912998,
+            "loc": "33500 Libourne, France",
+            "lon": -0.243985
+        },
+        {
+            "Address": "port de Lorient",
+            "id": 24,
+            "lat": 47.7442331,
+            "loc": "2 Bd Adolphe Pierre, 56100 Lorient, France",
+            "lon": -3.3577844
+        },
+        {
+            "Address": "port de Nantes",
+            "id": 25,
+            "lat": 47.2973033,
+            "loc": "Rue de la Pierre Perc�e, 44550 Montoir-de-Bretagne, France",
+            "lon": -2.1621733
+        },
+        {
+            "Address": "port de Pauillac",
+            "id": 26,
+            "lat": 45.1992485,
+            "loc": "Port de Pauillac, Quai Albert Pichon, 33250 Pauillac, France",
+            "lon": -0.7442429
+        },
+        {
+            "Address": "port de Pontivy",
+            "id": 27,
+            "lat": 48.066152,
+            "loc": "56300 Pontivy, France",
+            "lon": -2.967056
+        },
+        {
+            "Address": "port de Pornic",
+            "id": 28,
+            "lat": 47.1146642,
+            "loc": "5 Quai du Commandant l'Herminier, 44210 Pornic, France",
+            "lon": -2.0987764
+        },
+        {
+            "Address": "port de portets",
+            "id": 29,
+            "lat": 44.69632,
+            "loc": "33640 Portets, France",
+            "lon": -0.424569
+        },
+        {
+            "Address": "port de Quimper",
+            "id": 30,
+            "lat": 47.997542,
+            "loc": "29000 Quimper, France",
+            "lon": -4.097899
+        },
+        {
+            "Address": "port de quimperl�",
+            "id": 31,
+            "lat": 47.872586,
+            "loc": "29300 Quimperl�, France",
+            "lon": -3.547546
+        },
+        {
+            "Address": "port de Redon",
+            "id": 32,
+            "lat": 47.6451892,
+            "loc": "12 Quai Jean Bart, 35600 Redon, France",
+            "lon": -2.0876392
+        },
+        {
+            "Address": "port de Rochefort",
+            "id": 33,
+            "lat": 45.9501396,
+            "loc": "17300 Rochefort, France",
+            "lon": -0.9534282
+        },
+        {
+            "Address": "port de Royan",
+            "id": 34,
+            "lat": 45.6205656,
+            "loc": "1 Rue de la Vieille Jet�e, 17200 Royan, France",
+            "lon": -1.0291291
+        },
+        {
+            "Address": "port de saintes",
+            "id": 35,
+            "lat": 45.744175,
+            "loc": "17100 Saintes, France",
+            "lon": -0.633389
+        },
+        {
+            "Address": "port de St-Gilles",
+            "id": 36,
+            "lat": -21.0549722,
+            "loc": "Port de Saint-Gilles, R�union",
+            "lon": 55.2243671
+        },
+        {
+            "Address": "port de st martin",
+            "id": 37,
+            "lat": 46.2066904,
+            "loc": "Quai Daniel Rivaille, Saint-Martin-de-R�, France",
+            "lon": -1.3668715
+        },
+        {
+            "Address": "port de St Nazaire",
+            "id": 38,
+            "lat": 47.2813285,
+            "loc": "Port de Saint-Nazaire, 44600 Saint-Nazaire, France",
+            "lon": -2.1985876
+        },
+        {
+            "Address": "port de Vannes",
+            "id": 39,
+            "lat": 47.6514899,
+            "loc": "Quai Bernard Moitessier, 56000 Vannes, France",
+            "lon": -2.757531
+        }
+    ]
+}
