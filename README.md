@@ -1,4 +1,4 @@
-# <span style="color: green">Arvag</span>
+# Arvag
 
 Android application for the project Arvag.
 
@@ -10,7 +10,7 @@ _https://github.com/wahbimo/LatLng_
 
 ## <span style="color: blue">Image Scraping:</span>
 
-During this project we encountered a challenge of downloading the pictures of the products from a list of product names and their brands. Because the number of images is enormous manual downloading is not an option. Image scraping was the only valid solution I have left as the other solutions like using image APIs dont give any results.
+During this project we encountered a challenge of downloading the pictures of the products from a list of product names and their brands. Because the number of images is enormous, manual downloading is not an option. Image scraping was the only valid solution I have left as the other solutions like using image APIs dont give any results.
 
 I used *selenium* library to control the firefox browser and made a set of commands to download my images through *duckduckgo* search engine.
 
