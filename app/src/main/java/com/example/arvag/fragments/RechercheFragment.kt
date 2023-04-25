@@ -1,15 +1,15 @@
 package com.example.arvag.fragments
 
-import android.content.Intent
+
+import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
-import androidx.appcompat.widget.AppCompatButton
+import android.view.inputmethod.InputMethodManager
+import android.widget.*
+import androidx.appcompat.widget.SearchView
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -25,9 +25,8 @@ import com.example.arvag.products_view.CartModel
 import com.example.arvag.products_view.Product
 import com.example.arvag.utils.SpaceItemDecoration
 import com.google.android.material.snackbar.Snackbar
-import org.json.JSONObject
 import org.json.JSONArray
-
+import org.json.JSONObject
 import java.io.IOException
 import java.nio.charset.Charset
 
@@ -39,8 +38,8 @@ import java.nio.charset.Charset
  */
 
 class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, ICategoryLoadListener,
-    CategoryOnClickInterface,
-    IRecyclerClickListener {
+    CategoryOnClickInterface, IRecyclerClickListener
+{
 
     private lateinit var productsAdapter: ProductItemAdapter
     private lateinit var categoryAdapter: CategoryItemAdapter
@@ -55,25 +54,14 @@ class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, IC
 
     lateinit var recyclerProductView: RecyclerView
     lateinit var categoryView: RecyclerView
+    lateinit var searchView:SearchView
 
     private lateinit var productList: ArrayList<Product>
     private lateinit var categoriesList: ArrayList<String>
 
+    private var filteredProductList: ArrayList<Product> = ArrayList()
+
     private lateinit var categoryTitle: TextView
-
-
-    /*override fun onCreate(savedInstanceState: Bundle?) {
-         super.onCreate(savedInstanceState)
-         //recycler_product = view?.findViewById(R.id.recycler_product)!!
-
-     }*/
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        init()
-        loadCategoriesFromJSON()
-        loadProductFromJSON()
-    }
 
 
     override fun onCreateView(
@@ -86,13 +74,44 @@ class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, IC
         recyclerProductView = view.findViewById(R.id.recycler_product)
         categoryView = view.findViewById(R.id.rvMainCategories)
         categoryTitle = view.findViewById(R.id.tvMainCategories)
-        /*init()
-        loadCategoriesFromJSON()
-        loadProductFromJSON()*/
+        searchView = view.findViewById(R.id.idSearch)
 
-        // Inflate the layout for this fragment
-        return view //inflater.inflate(R.layout.fragment_recherche, container, false)
+
+        return view
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        init()
+        loadCategoriesFromJSON()
+        categoryAdapter.notifyDataSetChanged() //update the recyclerView of categories
+        loadProductFromJSON()
+        productsAdapter.notifyDataSetChanged() //update the recyclerView of products
+        var close_button:ImageView = view.findViewById(androidx.appcompat.R.id.search_close_btn)
+
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                if (newText != null && newText != "") {
+                    filter(newText)
+                }
+                return false
+            }
+
+        })
+        close_button.setOnClickListener {
+            searchView.setQuery("",false)
+            productsAdapter = ProductItemAdapter(requireContext(), productList!!, recyclerClickListener)
+            recyclerProductView.adapter = productsAdapter
+        }
+
+    }
+
+
+
 
 
     private fun init() {
@@ -103,6 +122,7 @@ class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, IC
         categoryOnClickListener = this
 
         val gridLayoutManager = GridLayoutManager(context, 2)
+        //productList is the initial list for the ProductsItemAdapter
         productsAdapter = ProductItemAdapter(requireContext(), productList!!, recyclerClickListener)
         recyclerProductView.adapter = productsAdapter
         recyclerProductView.layoutManager = gridLayoutManager
@@ -138,33 +158,23 @@ class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, IC
         return json
     }
 
-    private fun loadProductsFromJSONByCategory(category: String, productsList: ArrayList<Product>) {
+    private fun loadProductsFromJSONByCategory(category: String, list: ArrayList<Product>) {
         val objProducts = JSONObject(getJSONFromAssets("dataBaseProducts.json")!!)
-        //val productModels: ArrayList<Product> = ArrayList()
-        makingProductsListByCategory(objProducts.getJSONArray("products"), productsList, category)
-        //productList = productModels
-        /*if (productModels.isNotEmpty()) {
-            productLoadListener.onProductLoadSuccess(productModels)
-        } else {
-            productLoadListener.onProductLoadFailed("Les produits n'existe pas!")
-        }*/
+        makingProductsListByCategory(objProducts.getJSONArray("products"), list, category)
     }
 
     private fun makingProductsListByCategory(
         productsArray: JSONArray,
-        productsList: ArrayList<Product>,
+        list: ArrayList<Product>,
         category: String
     ) {
         for (i in 0 until productsArray.length()) {
             val pItem = productsArray.getJSONObject(i)
             val cat = pItem.getString("cat")
             if (cat == category) {
-                // Create a JSONObject for fetching single User's Data
-                //val pItem = productsArray.getJSONObject(i)
-                // Fetch id store it in variable
+
                 val id = pItem.getInt("id")
                 val name = pItem.getString("name")
-                //val cat = pItem.getString("cat")
                 val brand = pItem.getString("brands")
                 val categories = pItem.getString("categories")
                 val allergens = pItem.getString("allergens")
@@ -195,22 +205,14 @@ class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, IC
                     nutriscore_score
                 )
                 // add the details in the list
-                productsList.add(productDetails)
+                list.add(productDetails)
             }
         }
     }
 
     private fun loadProductFromJSON() {
         val objProducts = JSONObject(getJSONFromAssets("dataBaseProducts.json")!!)
-        //val productModels: ArrayList<Product> = ArrayList()
         makingProductsList(objProducts.getJSONArray("products"), productList)
-        productsAdapter.notifyDataSetChanged()
-        //productList = productModels
-        /*if (productModels.isNotEmpty()) {
-            productLoadListener.onProductLoadSuccess(productModels)
-        } else {
-            productLoadListener.onProductLoadFailed("Les produits n'existe pas!")
-        }*/
     }
 
     fun makingProductsList(
@@ -259,7 +261,6 @@ class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, IC
     }
 
     override fun onLoadCartSuccess(cartModelList: List<CartModel>) {
-        var cartSum = 0
     }
 
     override fun onLoadCartFailed(message: String?) {
@@ -271,22 +272,12 @@ class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, IC
     }
 
     override fun onItemClickListener(view:View?,position:Int) {
-        Toast.makeText(context,productList[position].name, Toast.LENGTH_SHORT).show()
-        /*val intent = Intent(context, DetailedFragment::class.java)
-        intent.putExtra("productItem", product)
-        startActivity(intent)*/
+        Toast.makeText(context,productsAdapter.getList()[position].name, Toast.LENGTH_SHORT).show()
     }
 
     private fun loadCategoriesFromJSON() {
         val objCategory = JSONObject(getJSONFromAssets("categories.json")!!)
-        //val categoriesList: ArrayList<String> = ArrayList()
         makingCategoriesList(objCategory.getJSONArray("cat"), categoriesList)
-        categoryAdapter.notifyDataSetChanged()
-        /*if (categoriesList.isNotEmpty()) {
-            categoryLoadListener.onCategoryLoadSuccess(categoriesList)
-        } else {
-            categoryLoadListener.onCategoryLoadFailed("Les categories n'existe pas!")
-        }*/
     }
 
     private fun makingCategoriesList(
@@ -305,45 +296,80 @@ class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, IC
     }
 
     override fun onCategoryLoadSuccess(categoryList: List<String>?) {
-        val adapter = CategoryItemAdapter(requireContext(), categoryList!!, this)
-        categoryView.adapter = adapter
+        //val adapter = CategoryItemAdapter(requireContext(), categoryList!!, this)
+        //categoryView.adapter = adapter
     }
 
     override fun onCategoryLoadFailed(message: String?) {
-        view?.let {
+        /*view?.let {
 
             Snackbar.make(it, message!!, Snackbar.LENGTH_LONG).show()
 
-        }
+        }*/
     }
 
     override fun onProductLoadSuccess(productModelList: List<Product>?) {
-        val adapter = ProductItemAdapter(requireContext(), productModelList!!, recyclerClickListener)
-        recyclerProductView.adapter = adapter
+        //val adapter = ProductItemAdapter(requireContext(), productModelList!!, recyclerClickListener)
+        //recyclerProductView.adapter = adapter
     }
 
     override fun onProductLoadFailed(message: String?) {
-        view?.let {
+        /*view?.let {
 
             Snackbar.make(it, message!!, Snackbar.LENGTH_LONG).show()
 
-        }
+        }*/
     }
 
     override fun onClickCategory(string: String) {
-        //Toast.makeText(requireContext(),string, Toast.LENGTH_LONG).show()
+
+        productsAdapter = ProductItemAdapter(requireContext(), productList!!, recyclerClickListener)
+        recyclerProductView.adapter = productsAdapter
+
+        searchView.setQuery("",false)
+        // Hiding the keyboard
+        val inputMethodManager = requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(view?.windowToken  , 0)
+        //Setting the name of the current category to the clicked category
         categoryTitle.text = string
+        //Scrolling to the top
         (recyclerProductView.layoutManager as GridLayoutManager).scrollToPosition(0)
-        var textButton = string
-        //Toast.makeText(context,textButton, Toast.LENGTH_LONG).show()
+
         productList.clear()
-        if (textButton != "Tout"){
-            loadProductsFromJSONByCategory(textButton.toString(),productList)
+        if (string != "Tout"){
+            loadProductsFromJSONByCategory(string,productList)
         }
         else{
-             loadProductFromJSON()
+            loadProductFromJSON()
         }
         productsAdapter.notifyDataSetChanged()
-        }
 
+        }
+    private fun filter(text: String) {
+
+    // creating a new array list to filter our data.
+    filteredProductList.clear()
+
+    // running a for loop to compare elements.
+    for (item in productList) {
+        // checking if the entered string matched with any item of our recycler view.
+        if (item.name?.toLowerCase()?.contains(text.toLowerCase()) == true){
+            filteredProductList.add(item)
+            //if (category == "Tout"){filteredProductList.add(item)}
+            //if (item.category == category){filteredProductList.add(item)}
+        }
+        }
+    if (filteredProductList.isEmpty()) {
+        // if no item is added in filtered list we are
+        // displaying a toast message as no data found.
+        Toast.makeText(requireContext(), "No Data Found..", Toast.LENGTH_SHORT).show()
+    } else {
+        // at last we are passing that filtered
+        // list to our adapter class.
+        productsAdapter = ProductItemAdapter(requireContext(), filteredProductList!!, recyclerClickListener)
+        recyclerProductView.adapter = productsAdapter
+        //productsAdapter.notifyDataSetChanged()
     }
+}
+
+}

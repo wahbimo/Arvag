@@ -22,6 +22,7 @@
         android:background="@color/arvag_purp"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
+        android:fitsSystemWindows="true"
         />
 
 

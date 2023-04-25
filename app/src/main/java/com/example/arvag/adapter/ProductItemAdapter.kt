@@ -16,7 +16,7 @@ import com.example.arvag.listener.IRecyclerClickListener
 
 class ProductItemAdapter (
     private val context:Context,
-    private val list:List<Product>,
+    private var list:List<Product>,
     private val onClickProduct: IRecyclerClickListener
 
 ):RecyclerView.Adapter<ProductItemAdapter.MyProductViewHolder>() {
@@ -53,6 +53,9 @@ class ProductItemAdapter (
 
     override fun getItemCount(): Int {
         return list.size
+    }
+    fun getList():List<Product>{
+        return list
     }
 
     override fun onBindViewHolder(holder: MyProductViewHolder, position: Int) {

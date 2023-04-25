@@ -52,7 +52,8 @@
             android:name=".activities.MainActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
-            android:exported="true"></activity>
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan|stateHidden" ></activity>
     </application>
 
 </manifest>

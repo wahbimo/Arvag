@@ -135,9 +135,11 @@ class MapsFragment() : Fragment(), OnMapReadyCallback {
 
         var mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
         var searchView:SearchView = view.findViewById(R.id.idSearchView)
+        val autoCompleteTextView = searchView.findViewById<AutoCompleteTextView>(androidx.appcompat.R.id.search_src_text)
         var close_button:ImageView = view.findViewById(androidx.appcompat.R.id.search_close_btn)
         var show_toast = false
-        searchView.findViewById<AutoCompleteTextView>(androidx.appcompat.R.id.search_src_text).threshold = 1
+        //searchView.findViewById<AutoCompleteTextView>(androidx.appcompat.R.id.search_src_text).threshold = 1
+        autoCompleteTextView.threshold = 1
 
         val from = arrayOf(SearchManager.SUGGEST_COLUMN_TEXT_1)
         val to = intArrayOf(R.id.item_label)
@@ -149,6 +151,7 @@ class MapsFragment() : Fragment(), OnMapReadyCallback {
         suggestionsList(citiesArray,citiesList)
 
         searchView.suggestionsAdapter = cursorAdapter
+        autoCompleteTextView.dropDownAnchor = searchView.id
 
         searchView.setOnQueryTextListener(object :SearchView.OnQueryTextListener{
             @SuppressLint("SuspiciousIndentation")
