@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
             supportFragmentManager.beginTransaction().apply {
                 add(R.id.frame_layout, accueilFragment, getString(R.string.accueil)).hide(accueilFragment)
                 add(R.id.frame_layout, rechercheFragment, getString(R.string.recherche)).hide(rechercheFragment)
@@ -54,6 +55,7 @@ class MainActivity : AppCompatActivity() {
                     activeFragment = mapsFragment
                     true
                 }
+
                 R.id.wishlist -> {
                     fragmentManager.beginTransaction().hide(activeFragment).show(wishlistFragment).commit()
                     activeFragment = wishlistFragment
@@ -98,3 +100,4 @@ class MainActivity : AppCompatActivity() {
         Handler().postDelayed({doubleBackToExitPressedOnce = false},2000)
     }
 }
+

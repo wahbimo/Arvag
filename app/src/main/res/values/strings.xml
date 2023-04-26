@@ -19,5 +19,10 @@
     <string name="pro">PROJET</string>
     <string name="map">VOISINAGE</string>
 
+    <string name="map_search_hint">Rechercher...</string>
+
+    <string name="address_not_valid">Adresse non valide</string>
+
+
 
 </resources>

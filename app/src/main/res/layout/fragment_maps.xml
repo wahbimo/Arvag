@@ -16,11 +16,12 @@ android:background="@color/light_blue_600">
         tools:layout="@layout/fragment_maps">
 
     </androidx.fragment.app.FragmentContainerView>
+
     <androidx.appcompat.widget.SearchView
         android:id="@+id/idSearchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="65dp"
         android:layout_marginRight="65dp"
         android:layout_marginTop="6dp"
         android:background="@drawable/search_menu"
@@ -29,9 +30,9 @@ android:background="@color/light_blue_600">
         android:inputType="textPostalAddress"
         app:searchIcon="@drawable/baseline_location_arvag_color"
         app:iconifiedByDefault="false"
-        app:queryHint="Rechercher dans la carte"
+        app:queryHint="@string/map_search_hint"
         app:queryBackground="@android:color/transparent"
-
+        app:autoShowKeyboard="true"
         />
 
 </FrameLayout>

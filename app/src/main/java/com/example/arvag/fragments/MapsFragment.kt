@@ -1,17 +1,27 @@
 package com.example.arvag.fragments
-
 import android.Manifest
+import android.annotation.SuppressLint
+import android.app.SearchManager
+import android.content.ContentValues.TAG
 import android.content.pm.PackageManager
+import android.database.Cursor
+import android.database.MatrixCursor
+import android.location.Address
+import android.location.Geocoder
+import android.location.Location
 import android.os.Build
 import android.os.Bundle
+import android.provider.BaseColumns
+import android.util.Log
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.SearchView
+import android.widget.*
 import androidx.annotation.RequiresApi
+import androidx.appcompat.widget.SearchView
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.cursoradapter.widget.SimpleCursorAdapter
 import androidx.fragment.app.Fragment
 import com.example.arvag.*
 import com.example.arvag.R
@@ -30,18 +40,24 @@ import java.io.IOException
 import java.nio.charset.Charset
 
 
+class MapsFragment() : Fragment(), OnMapReadyCallback {
+    private lateinit var mMap: GoogleMap
 
-class MapsFragment : Fragment() {
-
-
-    private lateinit var lastLocation: android.location.Location
+    private lateinit var lastLocation: Location
     private lateinit var fusedLocationClient: FusedLocationProviderClient
+    private var marker_on = false
+    private var marker: Marker? = null
+    private var circle: Circle? = null
+    //private lateinit var suggestions:Array<String>
+
     companion object{
-        private const val LOCATION_REQUEST_CODE = 1
+        const val LOCATION_REQUEST_CODE = 1
     }
     @RequiresApi(Build.VERSION_CODES.N)
     private val callback = OnMapReadyCallback { googleMap ->
         try {
+            mMap = googleMap
+            googleMap.setPadding(0,0,0,0)
             setUpMap(googleMap)
             googleMap.uiSettings.setZoomControlsEnabled(true)
             // As we have JSON object, so we are getting the object
@@ -59,18 +75,26 @@ class MapsFragment : Fragment() {
             val locationsListSuperU: ArrayList<LocationItem> = ArrayList()
             val locationsListBiocoop: ArrayList<LocationItem> = ArrayList()
             val locationsListBelleIloise: ArrayList<LocationItem> = ArrayList()
+            val portsList: ArrayList<LocationItem> = ArrayList()
+
 
             val objSuperU = JSONObject(getJSONFromAssets("superu.json")!!)
             val objBiocoop = JSONObject(getJSONFromAssets("biocoop.json")!!)
             val objBelleIloise = JSONObject(getJSONFromAssets("belle_iloise.json")!!)
+            val objPorts = JSONObject(getJSONFromAssets("ports_data.json")!!)
+
             // fetch JSONArray named locationArray... by using getJSONArray
             val locationArraySuperU = objSuperU.getJSONArray("lll")
             val locationArrayBiocoop = objBiocoop.getJSONArray("bbb")
             val locationArrayBelleIloise = objBelleIloise.getJSONArray("bbb")
+            val portsArray = objPorts.getJSONArray("ports")
 
             makingLocationsList(locationArraySuperU, locationsListSuperU)
             makingLocationsList(locationArrayBiocoop, locationsListBiocoop)
             makingLocationsList(locationArrayBelleIloise, locationsListBelleIloise)
+            makingLocationsList(portsArray, portsList)
+            placeMarkers(portsList,googleMap)
+            //addClusteredMarkers(googleMap,portsList)
 
             val bounds = LatLngBounds.builder()
 
@@ -102,22 +126,122 @@ class MapsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        return inflater.inflate(R.layout.fragment_maps, container, false)
+            return inflater.inflate(R.layout.fragment_maps, container, false)
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         var mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
+        var searchView:SearchView = view.findViewById(R.id.idSearchView)
+        val autoCompleteTextView = searchView.findViewById<AutoCompleteTextView>(androidx.appcompat.R.id.search_src_text)
+        var close_button:ImageView = view.findViewById(androidx.appcompat.R.id.search_close_btn)
+        var show_toast = false
+        //searchView.findViewById<AutoCompleteTextView>(androidx.appcompat.R.id.search_src_text).threshold = 1
+        autoCompleteTextView.threshold = 1
+
+        val from = arrayOf(SearchManager.SUGGEST_COLUMN_TEXT_1)
+        val to = intArrayOf(R.id.item_label)
+        val cursorAdapter = SimpleCursorAdapter(context, R.layout.suggestions, null, from, to, CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER)
+
+        val citiesList: ArrayList<String> = ArrayList()
+        val objCities = JSONObject(getJSONFromAssets("villes_france.json")!!)
+        val citiesArray = objCities.getJSONArray("villes_france")
+        suggestionsList(citiesArray,citiesList)
+
+        searchView.suggestionsAdapter = cursorAdapter
+        autoCompleteTextView.dropDownAnchor = searchView.id
+
+        searchView.setOnQueryTextListener(object :SearchView.OnQueryTextListener{
+            @SuppressLint("SuspiciousIndentation")
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                var l:String = searchView.query.toString()
+
+                if (l != null){
+                var addressList: List<Address>
+                val geocoder = context?.let { Geocoder(it) }
+                try{
+                    if ( !marker_on ) {
+                        if (geocoder != null) {
+                            addressList = geocoder.getFromLocationName(l,1) as List<Address>
+
+                            if (addressList.isNotEmpty()){
+                                var address:Address = addressList.get(0)
+                                var latLng = LatLng(address.latitude,address.longitude)
+                                marker =
+                                    mMap.addMarker(MarkerOptions().position(latLng).title("Ma recherche").snippet(address.getAddressLine(0)).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)))!!
+                                    circle = addCircle(mMap,latLng)
+                                    Toast.makeText(context,"5 km de rayon",Toast.LENGTH_LONG).show()
+                                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,12f))
+                                marker_on = true
+                            }
+                            else{
+                                if (!show_toast)
+                                {
+                                    Toast.makeText(context,resources.getString(R.string.address_not_valid),Toast.LENGTH_SHORT).show()
+                                show_toast = true
+                                }
+                            }
+                        }
+                    }
+                }catch (e :IOException ){
+                    e.printStackTrace()
+                }}
+            return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                marker?.remove()
+                circle?.remove()
+                marker_on = false
+                show_toast = false
+
+                val cursor = MatrixCursor(arrayOf(BaseColumns._ID, SearchManager.SUGGEST_COLUMN_TEXT_1))
+
+
+                newText?.let {
+                    citiesList.forEachIndexed { index, suggestion ->
+                        if (suggestion.contains(newText, true))
+                            cursor.addRow(arrayOf(index, suggestion))
+                    }
+                }
+                cursorAdapter.changeCursor(cursor)
+                return true}
+
+        })
+
+        searchView.setOnSuggestionListener(object: SearchView.OnSuggestionListener {
+            override fun onSuggestionSelect(position: Int): Boolean {
+                return false
+            }
+            @SuppressLint("Range")
+            override fun onSuggestionClick(position: Int): Boolean {
+                val cursor = searchView.suggestionsAdapter.getItem(position) as Cursor
+                val selection = cursor.getString(cursor.getColumnIndex(SearchManager.SUGGEST_COLUMN_TEXT_1))
+                searchView.setQuery(selection, false)
+                return true
+            }
+        })
+
+        close_button.setOnClickListener {
+            Log.d(TAG, "Search close button clicked")
+            if (marker_on) {
+                marker?.remove()
+                marker_on = false
+            }
+            var et:EditText = view.findViewById(androidx.appcompat.R.id.search_src_text)
+            et.setText("")
+            searchView.setQuery("",false)
+            show_toast = false
+        }
+
         mapFragment?.getMapAsync(callback)
+
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
 
     }
-
-
-
 
     fun getJSONFromAssets(fileName: String): String? {
 
@@ -203,18 +327,16 @@ class MapsFragment : Fragment() {
     }
     //@RequiresApi(Build.VERSION_CODES.N)
     private fun setUpMap(googleMap: GoogleMap){
-
         if (ActivityCompat.checkSelfPermission(
                 requireContext(),
                 Manifest.permission.ACCESS_FINE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED)
         {
-        ActivityCompat.requestPermissions(requireActivity(), arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
-            LOCATION_REQUEST_CODE
-        )
+            ActivityCompat.requestPermissions(requireActivity(), arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+                LOCATION_REQUEST_CODE
+            )
             return
         }
-
         googleMap.isMyLocationEnabled = true
         fusedLocationClient.lastLocation.addOnSuccessListener{
             if (it != null) {
@@ -226,11 +348,54 @@ class MapsFragment : Fragment() {
         }
     }
 
+    private fun placeMarkers(markersList: ArrayList<LocationItem>,googleMap: GoogleMap) {
+        val ic: BitmapDescriptor by lazy {
+            val color = context?.let { ContextCompat.getColor(it, R.color.blue_boat) }
+            BitmapHelper.vectorToBitmap(
+                requireContext(),
+                R.drawable.baseline_directions_boat_24,
+                color!!
+            )
+        }
+        for (i in 0 until markersList.size) {
+            val locationItem = markersList.get(i)
+            val address = locationItem.Address
+            val loc = locationItem.loc
+            val latLng = LatLng(locationItem.lat,locationItem.lon)
+            val markerOptions = MarkerOptions().position(latLng).icon(ic)
+        markerOptions.title(address).snippet(loc)
+        googleMap.addMarker(markerOptions)
+
+    }}
+
     private fun placeMarkerOnMap(currentLatLong: LatLng,googleMap: GoogleMap) {
-        val markerOptions = MarkerOptions().position(currentLatLong)
+        val markerOptions = MarkerOptions().position(currentLatLong).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
         markerOptions.title("Ma localisation")
         googleMap.addMarker(markerOptions)
     }
+
+    override fun onMapReady(map: GoogleMap) {
+    }
+
+    fun suggestionsList(
+        citiesArray: JSONArray,
+        citiesList: ArrayList<String>
+    ) {
+        for (i in 0 until citiesArray.length()) {
+            val key = citiesArray.getJSONObject(i)
+            val city = key.getString("city")
+            citiesList.add(city)
+        }
+    }
+    private fun addCircle(googleMap: GoogleMap, latLng: LatLng):Circle {
+        val circle = googleMap.addCircle(
+            CircleOptions()
+                .center(latLng)
+                .radius(5000.0)
+                .fillColor(ContextCompat.getColor(requireContext(), com.google.android.material.R.color.mtrl_btn_transparent_bg_color))
+                .strokeColor(ContextCompat.getColor(requireContext(), R.color.arvag_purp))
+        )
+        return circle
+    }
+
 }
-
-
