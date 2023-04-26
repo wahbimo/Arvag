@@ -1,14 +1,18 @@
 package com.example.arvag.fragments
 
 
+import android.content.ContentValues.TAG
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.appcompat.widget.SearchView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,6 +28,7 @@ import com.example.arvag.listener.IRecyclerClickListener
 import com.example.arvag.products_view.CartModel
 import com.example.arvag.products_view.Product
 import com.example.arvag.utils.SpaceItemDecoration
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.snackbar.Snackbar
 import org.json.JSONArray
 import org.json.JSONObject
@@ -38,7 +43,7 @@ import java.nio.charset.Charset
  */
 
 class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, ICategoryLoadListener,
-    CategoryOnClickInterface, IRecyclerClickListener
+    CategoryOnClickInterface, IRecyclerClickListener, OnFilterIconChangedListener,OnClickFilterButtons
 {
 
     private lateinit var productsAdapter: ProductItemAdapter
@@ -55,6 +60,11 @@ class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, IC
     lateinit var recyclerProductView: RecyclerView
     lateinit var categoryView: RecyclerView
     lateinit var searchView:SearchView
+    lateinit var filterButton:MaterialButton
+    lateinit var drawable: Drawable
+    lateinit var downArrow: Drawable
+    lateinit var upArrow: Drawable
+
 
     private lateinit var productList: ArrayList<Product>
     private lateinit var categoriesList: ArrayList<String>
@@ -75,8 +85,10 @@ class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, IC
         categoryView = view.findViewById(R.id.rvMainCategories)
         categoryTitle = view.findViewById(R.id.tvMainCategories)
         searchView = view.findViewById(R.id.idSearch)
-
-
+        filterButton = view.findViewById(R.id.filtersButton)
+        downArrow = ContextCompat.getDrawable(requireContext(), R.drawable.baseline_keyboard_arrow_down_24)!!
+        upArrow = ContextCompat.getDrawable(requireContext(), R.drawable.baseline_keyboard_arrow_up_24)!!
+        filterButton.icon = downArrow
         return view
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -107,8 +119,28 @@ class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, IC
             productsAdapter = ProductItemAdapter(requireContext(), productList!!, recyclerClickListener)
             recyclerProductView.adapter = productsAdapter
         }
+        filterButton.setOnClickListener{
+            val filterMenuFragment = FilterMenuFragment()
+            filterMenuFragment.setListener(this) // register the listener
+            filterMenuFragment.setListenerButtons(this)
+            if (filterButton.icon.equals(downArrow)) {
+                Log.d(TAG, "Changing icon to up arrow")
+                filterButton.icon = upArrow
+                filterMenuFragment.show(parentFragmentManager, "FilterMenuFragment")
+            } else {
+                Log.d(TAG, "Changing icon to down arrow")
+                filterButton.icon = downArrow
+            }
+        }
+
+
 
     }
+
+    override fun onFilterIconChanged() {
+        filterButton.icon = downArrow
+    }
+
 
 
 
@@ -362,7 +394,7 @@ class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, IC
     if (filteredProductList.isEmpty()) {
         // if no item is added in filtered list we are
         // displaying a toast message as no data found.
-        Toast.makeText(requireContext(), "No Data Found..", Toast.LENGTH_SHORT).show()
+        Toast.makeText(requireContext(), "Aucune donnée disponible...", Toast.LENGTH_SHORT).show()
     } else {
         // at last we are passing that filtered
         // list to our adapter class.
@@ -371,5 +403,29 @@ class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, IC
         //productsAdapter.notifyDataSetChanged()
     }
 }
+
+    override fun onSortByAlphaButtonAZ() {
+
+        productsAdapter = ProductItemAdapter(requireContext(), productsAdapter.getList().sortedBy { it.name }!!, recyclerClickListener)
+        recyclerProductView.adapter = productsAdapter
+    }
+
+    override fun onSortByAlphaButtonZA() {
+        productsAdapter = ProductItemAdapter(requireContext(),productsAdapter.getList().sortedByDescending { it.name }!!, recyclerClickListener)
+
+        recyclerProductView.adapter = productsAdapter
+    }
+
+    override fun onSortByEcoScoreButton() {
+        productsAdapter = ProductItemAdapter(requireContext(),productsAdapter.getList().sortedBy { it.ecoscore_score }!!, recyclerClickListener)
+
+        recyclerProductView.adapter = productsAdapter
+    }
+
+    override fun onFilterByNutriScoreButton() {
+        productsAdapter = ProductItemAdapter(requireContext(),productsAdapter.getList().sortedBy { it.nutriscore_score }!!, recyclerClickListener)
+        recyclerProductView.adapter = productsAdapter
+    }
+
 
 }

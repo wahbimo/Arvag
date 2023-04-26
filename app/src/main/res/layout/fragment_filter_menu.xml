@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/sort_by_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trier par:"
+        android:textSize="18sp"
+        android:padding="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="8dp">
+
+        <Button
+            android:id="@+id/sort_by_alpha_az_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ordre Alphabétique (A-Z)"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/arvag_purp"/>
+
+        <Button
+            android:id="@+id/sort_by_alpha_za_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ordre Alphabétique (Z-A)"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/arvag_purp"/>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sort_by_ecoscore_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eco-Score"
+        android:backgroundTint="@color/arvag_purp"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:layout_marginHorizontal="15dp"
+        app:icon="@drawable/baseline_compost_24"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/filter_by_nutriscore_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nutri-Score"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/arvag_purp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="30dp"
+        app:icon="@drawable/baseline_water_drop_24" />
+</LinearLayout>
