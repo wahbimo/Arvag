@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/sort_by_textview"
@@ -11,6 +12,7 @@
         android:layout_height="wrap_content"
         android:text="Trier par:"
         android:textSize="18sp"
+        android:textColor="@color/black"
         android:padding="16dp"/>
 
     <LinearLayout
@@ -49,7 +51,9 @@
         android:textColor="@android:color/white"
         android:textAllCaps="false"
         android:layout_marginHorizontal="15dp"
-        app:icon="@drawable/baseline_compost_24"/>
+        app:icon="@drawable/baseline_compost_24"
+        app:iconTint="@color/white"
+        app:iconGravity="textStart"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/filter_by_nutriscore_button"
@@ -61,5 +65,7 @@
         android:backgroundTint="@color/arvag_purp"
         android:layout_marginHorizontal="15dp"
         android:layout_marginBottom="30dp"
-        app:icon="@drawable/baseline_water_drop_24" />
+        app:icon="@drawable/baseline_water_drop_24"
+        app:iconTint="@color/white"
+        app:iconGravity="textStart"/>
 </LinearLayout>

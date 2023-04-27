@@ -304,7 +304,9 @@ class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, IC
     }
 
     override fun onItemClickListener(view:View?,position:Int) {
-        Toast.makeText(context,productsAdapter.getList()[position].name, Toast.LENGTH_SHORT).show()
+        //Toast.makeText(context,productsAdapter.getList()[position].name, Toast.LENGTH_SHORT).show()
+        val detailedFragment = DetailedFragment(productsAdapter.getList()[position])
+        detailedFragment.show(parentFragmentManager, "DetailedFragment")
     }
 
     private fun loadCategoriesFromJSON() {
@@ -394,7 +396,7 @@ class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, IC
     if (filteredProductList.isEmpty()) {
         // if no item is added in filtered list we are
         // displaying a toast message as no data found.
-        Toast.makeText(requireContext(), "Aucune donnée disponible...", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(requireContext(), "Aucune donnée disponible...", Toast.LENGTH_SHORT).show()
     } else {
         // at last we are passing that filtered
         // list to our adapter class.
@@ -417,7 +419,7 @@ class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, IC
     }
 
     override fun onSortByEcoScoreButton() {
-        productsAdapter = ProductItemAdapter(requireContext(),productsAdapter.getList().sortedBy { it.ecoscore_score }!!, recyclerClickListener)
+        productsAdapter = ProductItemAdapter(requireContext(),productsAdapter.getList().sortedBy { it.ecoscore_grade }!!, recyclerClickListener)
 
         recyclerProductView.adapter = productsAdapter
     }

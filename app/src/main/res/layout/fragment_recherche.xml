@@ -83,6 +83,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:queryBackground="@android:color/transparent"
-        app:queryHint="@string/map_search_hint"/>
+        app:queryHint="@string/map_search_hint"
+        android:theme="@style/MySearchViewStyle"
+        >
+    </androidx.appcompat.widget.SearchView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
