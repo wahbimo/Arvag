@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="12dp"
+    android:padding="8dp"
+    android:layout_margin="8dp"
+    android:layout_width="wrap_content"
+    android:backgroundTint="@color/white"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:padding="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/productImageWishlist"
+            android:src="@drawable/baseline_location_arvag_color"
+            android:layout_width="150dp"
+            android:layout_height="150dp">
+        </ImageView>
+        <TextView
+            android:id="@+id/productNameWishlist"
+            android:text="Product Name"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/arvag_purp"
+            android:layout_gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+        <TextView
+            android:id="@+id/productCategoryWishlist"
+            android:text="Product Category"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            android:textColor="@color/light_blue_600"
+            android:layout_gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:id="@+id/productBrandWishlist"
+            android:text="Brand"
+            android:textStyle="normal"
+            android:textSize="10sp"
+            android:textColor="@color/light_blue_900"
+            android:layout_gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/heart_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/heart"
+        app:tint="@color/red" >
+
+    </ImageView>
+</androidx.cardview.widget.CardView>

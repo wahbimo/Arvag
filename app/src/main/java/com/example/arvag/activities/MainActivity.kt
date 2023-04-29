@@ -57,6 +57,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.wishlist -> {
+                    //fragmentManager.beginTransaction().replace(R.id.frame_layout, wishlistFragment).commit()
                     fragmentManager.beginTransaction().hide(activeFragment).show(wishlistFragment).commit()
                     activeFragment = wishlistFragment
                     true

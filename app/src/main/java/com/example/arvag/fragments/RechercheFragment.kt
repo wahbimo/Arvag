@@ -21,15 +21,12 @@ import com.example.arvag.R
 import com.example.arvag.adapter.CategoryItemAdapter
 import com.example.arvag.adapter.CategoryOnClickInterface
 import com.example.arvag.adapter.ProductItemAdapter
-import com.example.arvag.listener.ICartLoadListener
 import com.example.arvag.listener.ICategoryLoadListener
 import com.example.arvag.listener.IProductLoadListener
 import com.example.arvag.listener.IRecyclerClickListener
-import com.example.arvag.products_view.CartModel
 import com.example.arvag.products_view.Product
 import com.example.arvag.utils.SpaceItemDecoration
 import com.google.android.material.button.MaterialButton
-import com.google.android.material.snackbar.Snackbar
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.IOException
@@ -42,7 +39,7 @@ import java.nio.charset.Charset
  * create an instance of this fragment.
  */
 
-class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, ICategoryLoadListener,
+class RechercheFragment : Fragment(), IProductLoadListener, ICategoryLoadListener,
     CategoryOnClickInterface, IRecyclerClickListener, OnFilterIconChangedListener,OnClickFilterButtons
 {
 
@@ -50,7 +47,6 @@ class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, IC
     private lateinit var categoryAdapter: CategoryItemAdapter
 
     lateinit var productLoadListener: IProductLoadListener
-    lateinit var cartLoadListener: ICartLoadListener
     lateinit var recyclerClickListener: IRecyclerClickListener
 
     lateinit var categoryLoadListener: ICategoryLoadListener
@@ -148,7 +144,6 @@ class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, IC
 
     private fun init() {
         productLoadListener = this
-        cartLoadListener = this
         categoryLoadListener = this
         recyclerClickListener = this
         categoryOnClickListener = this
@@ -289,17 +284,6 @@ class RechercheFragment : Fragment(), IProductLoadListener,ICartLoadListener, IC
             )
             // add the details in the list
             productsList.add(productDetails)
-        }
-    }
-
-    override fun onLoadCartSuccess(cartModelList: List<CartModel>) {
-    }
-
-    override fun onLoadCartFailed(message: String?) {
-        view?.let {
-
-            Snackbar.make(it, message!!, Snackbar.LENGTH_LONG).show()
-
         }
     }
 
