@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.arvag.R
 import com.example.arvag.products_view.Product
 import com.bumptech.glide.Glide
-import com.example.arvag.listener.ICartLoadListener
 import com.example.arvag.listener.IRecyclerClickListener
 
 

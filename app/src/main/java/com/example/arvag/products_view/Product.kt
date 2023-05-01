@@ -1,51 +1,55 @@
 package com.example.arvag.products_view
 import android.os.Parcel
 import android.os.Parcelable
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parceler
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
+@Entity(tableName = "product_table")
 data class Product(
 
     @SerializedName("id")
-    var id: Int? = null,
+    @PrimaryKey val id: Int? = null,
 
     @SerializedName("name")
-    var name: String? = null,
+    @ColumnInfo(name = "name") val name: String? = null,
 
     @SerializedName("cat")
-    var category: String? = null,
+    @ColumnInfo(name = "cat") val category: String? = null,
 
     @SerializedName("brands")
-    var brand: String? = null,
+    @ColumnInfo(name = "brand") val brand: String? = null,
 
     @SerializedName("categories")
-    var categories: String? = null,
+    @ColumnInfo(name = "categories") val categories: String? = null,
 
     @SerializedName("allergens")
-    var allergens: String? = null,
+    @ColumnInfo(name = "allergens") val allergens: String? = null,
 
     @SerializedName("ecoscore_grade")
-    var ecoscore_grade: String? = null,
+    @ColumnInfo(name = "ecoscore_grade") val ecoscore_grade: String? = null,
 
     @SerializedName("nutriscore_grade")
-    var nutriscore_grade: String? = null,
+    @ColumnInfo(name = "nutriscore_grade") val nutriscore_grade: String? = null,
 
     @SerializedName("ingredients")
-    var ingredients: String? = null,
+    @ColumnInfo(name = "ingredients") val ingredients: String? = null,
 
     @SerializedName("quantity")
-    var quantity: String? = null,
+    @ColumnInfo(name = "quantity") val quantity: String? = null,
 
     @SerializedName("packaging")
-    var packaging: String? = null,
+    @ColumnInfo(name = "packaging") val packaging: String? = null,
 
     @SerializedName("ecoscore_score")
-    var ecoscore_score: String? = null,
+    @ColumnInfo(name = "ecoscore_score") val ecoscore_score: String? = null,
 
     @SerializedName("nutriscore_score")
-    var nutriscore_score: String? = null
+    @ColumnInfo(name = "nutriscore_score") val nutriscore_score: String? = null
 
 ) : Parcelable {
 
