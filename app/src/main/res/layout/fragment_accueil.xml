@@ -1,19 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.AccueilFragment"
-    android:background="@color/light_blue_600">
+    tools:context=".activities.MainActivity"
+    >
 
+    <include
+        android:id="@+id/include"
+        layout="@layout/mytoolbar" />
 
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Accueil Fragment"
-        android:textSize="26dp"
-        android:layout_gravity="center" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@color/arvag_purp"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:fitsSystemWindows="true"
+        />
 
-</FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:layout_constraintVertical_bias="1.0"
+        >
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="154dp"
+            android:layout_height="92dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="520dp"
+            android:backgroundTint="@color/teal_200"
+            android:onClick="openWebPage"
+            android:padding="10dp"
+            android:text="Site web d'Arvag"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/buttonhhh"
+            android:layout_width="154dp"
+            android:layout_height="92dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="520dp"
+            android:backgroundTint="@color/teal_200"
+            android:onClick="openWebPage"
+            android:padding="10dp"
+            android:text="Site web d'Arvag"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/bottom_margin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
+
+
