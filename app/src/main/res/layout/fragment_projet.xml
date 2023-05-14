@@ -26,36 +26,38 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="NOTRE PROJET"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
             android:textColor="@color/arvag_purp"
             android:textColorHighlight="@color/arvag_purp"
             android:textColorLink="#0A4b45"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:gravity="center"/>
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/baseline_directions_boat_24" />
+            android:textSize="30sp"
+            android:translationY="10dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Description du projet"
-            android:gravity="center"/>
+            android:layout_height="141dp"
+            android:gravity="center"
+            android:translationY="17dp"
+            android:text="Parce qu’il parait essentiel de relever les défis environnementaux, Arvag achemine les marchandises par voilier au plus près du consommateur sur le littoral de la façade atlantique, entre Bordeaux et Brest.
+L’application Arvag va vous permettre de contribuer personnellement à ce projet car en achetant les produits proposés vous devenez co-propriétaire du bateau voué à les transporter.
+Surfez sur la vague !
+"
+            android:textColor="#66000000" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/arvag_purp"
             android:gravity="center"
             android:padding="7dp"
             android:text="Envie d'en savoir plus ?"
-            android:backgroundTint="@color/arvag_purp"/>
+            android:translationX="100dp"
+            android:translationY="30dp" />
 
         <TextView
             android:id="@+id/textView2"
@@ -66,11 +68,13 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
             android:textColor="@color/arvag_purp"
             android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:translationY="70dp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:translationY="100dp"/>
 
     </LinearLayout>
 
