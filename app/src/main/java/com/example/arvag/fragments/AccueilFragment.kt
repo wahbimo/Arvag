@@ -19,13 +19,13 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class AccueilFragment : Fragment() {
-    fun openWebPage(view: View?) {
+    /*fun openWebPage(view: View?) {
         val webpage: Uri = Uri.parse("https://www.arvag.org")
         val intent = Intent(Intent.ACTION_VIEW, webpage)
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent)
         }
-    }
+    }*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

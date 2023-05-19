@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".fragments.ProjetFragment">
-
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Projet Fragment"
-        android:textSize="26dp" />
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,11 +31,15 @@
             android:layout_height="141dp"
             android:gravity="center"
             android:translationY="17dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:paddingHorizontal="15dp"
+            android:justificationMode="inter_word"
             android:text="Parce qu’il parait essentiel de relever les défis environnementaux, Arvag achemine les marchandises par voilier au plus près du consommateur sur le littoral de la façade atlantique, entre Bordeaux et Brest.
 L’application Arvag va vous permettre de contribuer personnellement à ce projet car en achetant les produits proposés vous devenez co-propriétaire du bateau voué à les transporter.
 Surfez sur la vague !
 "
-            android:textColor="#66000000" />
+            android:textColor="@color/arvag_purp" />
 
         <Button
             android:id="@+id/button2"
@@ -72,9 +65,12 @@ Surfez sur la vague !
             android:translationY="70dp"/>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:paddingHorizontal="50dp"
+            android:id="@+id/recycler_partners"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:translationY="100dp"/>
+            android:translationY="100dp"
+            tools:listitem="@layout/upper_category_button"/>
 
     </LinearLayout>
 

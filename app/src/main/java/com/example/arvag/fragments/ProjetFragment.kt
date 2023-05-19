@@ -1,61 +1,97 @@
 package com.example.arvag.fragments
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.arvag.R
+import com.example.arvag.adapter.PartnersAdapter
+import org.json.JSONArray
+import org.json.JSONObject
+import java.io.IOException
+import java.nio.charset.Charset
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ProjetFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ProjetFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    lateinit var moreInfoButton: Button
+    lateinit var recyclerPartnersView: RecyclerView
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_projet, container, false)
+
+        val view = inflater.inflate(R.layout.fragment_projet, container, false)
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ProjetFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ProjetFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        moreInfoButton = view.findViewById(R.id.button2)
+        recyclerPartnersView = view.findViewById(R.id.recycler_partners)
+        moreInfoButton.setOnClickListener{
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.arvag.org/"))
+            startActivity(browserIntent)
+        }
+
+        val gridLayoutManager = GridLayoutManager(context, 1)
+
+        val objPartners = JSONObject(getJSONFromAssets("partenaires.json")!!)
+
+        val partnersList: ArrayList<String> = ArrayList()
+        makingPartnersList(objPartners.getJSONArray("part"), partnersList)
+
+        val partnersAdapter = PartnersAdapter(requireContext(), partnersList!!)
+        recyclerPartnersView.adapter = partnersAdapter
+        recyclerPartnersView.layoutManager = gridLayoutManager
+
+
     }
+
+    fun makingPartnersList(
+        partnersArray: JSONArray,
+        partnersList: ArrayList<String>
+    ) {
+        for (i in 0 until partnersArray.length()) {
+            val pItem = partnersArray.getJSONObject(i)
+
+            val name = pItem.getString("part")
+
+            // add the details in the list
+            partnersList.add(name)
+        }
+    }
+
+    fun getJSONFromAssets(fileName: String): String? {
+
+        var json: String?
+        val charset: Charset = Charsets.UTF_8
+        try {
+            val myUsersJSONFile = context?.assets?.open(fileName)
+            val size = myUsersJSONFile?.available()
+            val buffer = size?.let { ByteArray(it) }
+            if (myUsersJSONFile != null) {
+                myUsersJSONFile.read(buffer)
+                myUsersJSONFile.close()
+
+            }
+
+            json = buffer?.let { String(it, charset) }
+        } catch (ex: IOException) {
+            ex.printStackTrace()
+            return null
+        }
+        return json
+    }
+
+
+
 }
 
