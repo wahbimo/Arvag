@@ -1,5 +1,6 @@
 package com.example.arvag.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -18,16 +19,17 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class AccueilFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    fun openWebPage(view: View?) {
+        val webpage: Uri = Uri.parse("https://www.arvag.org")
+        val intent = Intent(Intent.ACTION_VIEW, webpage)
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent)
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
     }
 
     override fun onCreateView(
