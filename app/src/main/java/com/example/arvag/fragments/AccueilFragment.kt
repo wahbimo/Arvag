@@ -14,6 +14,7 @@ import com.example.arvag.R
 
 class AccueilFragment : Fragment() {
     lateinit var moreInfoButton: Button
+    lateinit var contactButton: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,16 +25,21 @@ class AccueilFragment : Fragment() {
         return view
     }
 
-    fun Bundle?.onCreateView(
+    /*fun Bundle?.onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_accueil, container, false)
-    }
+    }*/
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         moreInfoButton = view.findViewById(R.id.buttonsite)
         moreInfoButton.setOnClickListener {
             val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.arvag.org/"))
+            startActivity(browserIntent)
+        }
+        contactButton = view.findViewById(R.id.buttoncontact)
+        contactButton.setOnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.arvag.org/contact/"))
             startActivity(browserIntent)
         }
     }
