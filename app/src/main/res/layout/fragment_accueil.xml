@@ -1,49 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MainActivity"
-    >
+    android:background="@color/white"
+    tools:context=".fragments.AccueilFragment">
 
-    <FrameLayout
-        android:id="@+id/frame_layout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="154dp"
-            android:layout_height="92dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="520dp"
-            android:backgroundTint="@color/teal_200"
-            android:onClick="openWebPage"
-            android:padding="10dp"
-            android:text="Site web d'Arvag"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/buttonhhh"
-            android:layout_width="154dp"
-            android:layout_height="92dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="520dp"
-            android:backgroundTint="@color/teal_200"
-            android:onClick="openWebPage"
-            android:padding="10dp"
-            android:text="Site web d'Arvag"
-            android:textSize="20sp" />
-
-        <View
-            android:id="@+id/bottom_margin"
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="50dp" />
-    </FrameLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Où en sommes-nous ?"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@color/arvag_purp"
+            android:textColorHighlight="@color/arvag_purp"
+            android:textColorLink="#0A4b45"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:translationX="20dp"
+            android:translationY="100dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="270sp"
+            android:layout_height="200sp"
+            android:gravity="center"
+            android:src="@drawable/avanc_e_projet_accueil"
+            android:translationX="65dp"
+            android:translationY="110dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Aujourd'hui 21% du budget ont déjà été générés ensembles ! "
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@color/arvag_purp"
+            android:textColorHighlight="@color/arvag_purp"
+            android:textColorLink="#0A4b45"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:translationY="110dp"/>
+
+        <Button
+            android:id="@+id/buttonsite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/arvag_purp"
+            android:gravity="center"
+            android:padding="17dp"
+            android:text="Notre site web"
+            android:translationX="20dp"
+            android:translationY="206dp" />
+
+        <Button
+            android:id="@+id/buttoncontact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/arvag_purp"
+            android:gravity="center"
+            android:padding="17dp"
+            android:text="Nous contacter"
+            android:translationX="220dp"
+            android:translationY="141dp" />
+
+    </LinearLayout>
+
+</FrameLayout>
+
+
