@@ -5,7 +5,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
@@ -18,7 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Arvag"
         tools:targetApi="31">
-
+        <profileable
+            android:shell="true"
+            tools:targetApi="29" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -51,11 +53,9 @@
         <activity
             android:name=".activities.MainActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"
             android:exported="true"
-            android:windowSoftInputMode="adjustPan|stateHidden" ></activity>
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
     </application>
 
 </manifest>
-
-
