@@ -17,12 +17,21 @@ import org.json.JSONObject
 import java.io.IOException
 import java.nio.charset.Charset
 
-
+/**
+ * A fragment representing the ProjetFragment in the app.
+ * This fragment displays a list of partners and provides a button to open a web page.
+ */
 class ProjetFragment : Fragment() {
     lateinit var moreInfoButton: Button
     lateinit var recyclerPartnersView: RecyclerView
 
-
+    /**
+     * Called to have the fragment instantiate its user interface view.
+     * @param inflater           The LayoutInflater object that can be used to inflate any views in the fragment.
+     * @param container          If non-null, this is the parent view that the fragment's UI should be attached to.
+     * @param savedInstanceState If non-null, this fragment is being re-constructed from a previous saved state.
+     * @return                   The View for the fragment's UI, or null.
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -32,6 +41,11 @@ class ProjetFragment : Fragment() {
         return view
     }
 
+    /**
+     * Called immediately after onCreateView() has returned, but before any saved state has been restored in to the view.
+     * @param view               The View returned by onCreateView().
+     * @param savedInstanceState If non-null, this fragment is being re-constructed from a previous saved state.
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         moreInfoButton = view.findViewById(R.id.button2)
@@ -55,6 +69,11 @@ class ProjetFragment : Fragment() {
 
     }
 
+    /**
+     * Extracts partner names from a JSON array and adds them to the partnersList.
+     * @param partnersArray The JSONArray containing partner objects.
+     * @param partnersList  The ArrayList to store partner names.
+     */
     fun makingPartnersList(
         partnersArray: JSONArray,
         partnersList: ArrayList<String>
@@ -69,6 +88,11 @@ class ProjetFragment : Fragment() {
         }
     }
 
+    /**
+     * Reads JSON data from a file in the assets folder.
+     * @param fileName The name of the JSON file.
+     * @return         The JSON data as a string, or null if an error occurs.
+     */
     fun getJSONFromAssets(fileName: String): String? {
 
         var json: String?

@@ -7,7 +7,27 @@ import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parceler
 import kotlinx.parcelize.Parcelize
+/**
+ * Represents a product in the application.
+ */
 
+/**
+ * Constructs a new Product object with the specified properties.
+ *
+ * @param id              The ID of the product.
+ * @param name            The name of the product.
+ * @param category        The category of the product.
+ * @param brand           The brand of the product.
+ * @param categories      The categories of the product.
+ * @param allergens       The allergens of the product.
+ * @param ecoscoreGrade   The ecoscore grade of the product.
+ * @param nutriscoreGrade The nutriscore grade of the product.
+ * @param ingredients     The ingredients of the product.
+ * @param quantity        The quantity of the product.
+ * @param packaging       The packaging of the product.
+ * @param ecoscoreScore   The ecoscore score of the product.
+ * @param nutriscoreScore The nutriscore score of the product.
+ */
 @Parcelize
 @Entity(tableName = "product_table")
 data class Product(

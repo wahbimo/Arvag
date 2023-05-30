@@ -8,9 +8,16 @@ import android.os.Handler
 import android.os.Looper
 import android.view.WindowManager
 import com.example.arvag.R
-
+/**
+ * The splash screen activity that is displayed when the app starts.
+ */
 @SuppressLint("CustomSplashScreen")
 class SplashScreen : AppCompatActivity() {
+    /**
+     * Called when the activity is starting.
+     *
+     * @param savedInstanceState The saved instance state.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)

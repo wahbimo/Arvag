@@ -14,7 +14,9 @@ private val rechercheFragment = RechercheFragment()
 private val wishlistFragment = WishlistFragment()
 private val projetFragment = ProjetFragment()
 private val mapsFragment = MapsFragment()
-
+/**
+ * The main activity of the application.
+ */
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
 
@@ -26,7 +28,11 @@ class MainActivity : AppCompatActivity() {
 
     private var activeFragment: Fragment = accueilFragment
 
-
+    /**
+     * Called when the activity is starting.
+     *
+     * @param savedInstanceState The saved instance state.
+     */
         override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -77,12 +83,17 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
+    /**
+     * Handles the back button press event.
+     */
     @Suppress("DEPRECATION")
     override fun onBackPressed() {
         doubleBackToExit()
     }
 
+    /**
+     * Handles the double back press event to exit the app.
+     */
     @Suppress("DEPRECATION")
     private fun doubleBackToExit(){
         if (doubleBackToExitPressedOnce){

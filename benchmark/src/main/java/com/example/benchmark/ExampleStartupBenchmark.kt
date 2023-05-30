@@ -30,7 +30,7 @@ class ExampleStartupBenchmark {
     fun startup() = benchmarkRule.measureRepeated(
         packageName = "com.example.arvag",
         metrics = listOf(StartupTimingMetric()),
-        iterations = 5,
+        iterations = 10,
         startupMode = StartupMode.COLD
     ) {
         pressHome()

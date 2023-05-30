@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Aujourd'hui 21% du budget ont déjà été générés ensembles !"
+            android:text="Aujourd'hui 21% du budget ont déjà été générés ensemble !"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
             android:textColor="@color/arvag_purp"
             android:textColorHighlight="@color/arvag_purp"
@@ -63,8 +63,9 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/arvag_purp"
                 android:gravity="center"
-                android:padding="17dp"
+                android:padding="0dp"
                 android:text="Notre site web"
+                android:textColor="@color/white"
                 android:layout_weight="1"
                 android:layout_marginEnd="10dp"/>
 
@@ -74,8 +75,9 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/arvag_purp"
                 android:gravity="center"
-                android:padding="17dp"
+                android:padding="0dp"
                 android:text="Nous contacter"
+                android:textColor="@color/white"
                 android:layout_weight="1"
                 android:layout_marginStart="10dp"/>
 

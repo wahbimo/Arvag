@@ -8,7 +8,15 @@ import android.widget.TextView
 import com.example.arvag.R
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.Marker
-
+/**
+ * Custom InfoWindowAdapter for Google Maps markers.
+ * This adapter is responsible for providing custom views for marker info windows.
+ */
+/**
+ * Constructs a new MarkerInfoWindowAdapter with the specified context.
+ *
+ * @param context The context used to inflate the custom view for the info window.
+ */
 class MarkerInfoWindowAdapter(
     private val context: Context
 ) : GoogleMap.InfoWindowAdapter {

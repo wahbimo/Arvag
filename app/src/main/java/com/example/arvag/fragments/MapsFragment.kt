@@ -39,6 +39,10 @@ import org.json.JSONObject
 import java.io.IOException
 import java.nio.charset.Charset
 
+/**
+ * A fragment that displays a map with markers and search functionality.
+ */
+
 
 class MapsFragment() : Fragment(), OnMapReadyCallback {
     private lateinit var mMap: GoogleMap
@@ -51,6 +55,9 @@ class MapsFragment() : Fragment(), OnMapReadyCallback {
     //private lateinit var suggestions:Array<String>
 
     companion object{
+        /**
+         * Constant value for location request code.
+         */
         const val LOCATION_REQUEST_CODE = 1
     }
     @RequiresApi(Build.VERSION_CODES.N)
@@ -63,6 +70,7 @@ class MapsFragment() : Fragment(), OnMapReadyCallback {
             // As we have JSON object, so we are getting the object
             //Here we are calling a Method which is returning the JSON object
 
+            // Create a bitmap descriptor for marker icon
             val ic: BitmapDescriptor by lazy {
                 val color = context?.let { ContextCompat.getColor(it, R.color.arvag_purp) }
                 BitmapHelper.vectorToBitmap(
@@ -120,7 +128,17 @@ class MapsFragment() : Fragment(), OnMapReadyCallback {
 
 
 
-
+    /**
+     * Called when the fragment view is created.
+     *
+     * @param inflater           The LayoutInflater object that can be used to inflate
+     *                           any views in the fragment,
+     * @param container          If non-null, this is the parent view that the fragment's
+     *                           UI should be attached to.
+     * @param savedInstanceState If non-null, this fragment is being re-constructed
+     *                           from a previous saved state as given here.
+     * @return Return the View for the fragment's UI, or null.
+     */
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -243,6 +261,12 @@ class MapsFragment() : Fragment(), OnMapReadyCallback {
 
     }
 
+    /**
+     * Retrieves JSON data from assets folder.
+     *
+     * @param fileName The name of the JSON file in the assets folder.
+     * @return The JSON data as a string.
+     */
     fun getJSONFromAssets(fileName: String): String? {
 
         var json: String?
@@ -265,6 +289,13 @@ class MapsFragment() : Fragment(), OnMapReadyCallback {
         return json
     }
 
+    /**
+     * Creates a list of LocationItem objects from a JSONArray.
+     *
+     * @param jsonArray      The JSONArray containing location data.
+     * @param locationList   The list to store the LocationItem objects.
+     * @throws JSONException If an error occurs while parsing the JSON data.
+     */
     fun makingLocationsList(
         locationArray: JSONArray,
         locationsList: ArrayList<LocationItem>
@@ -326,6 +357,11 @@ class MapsFragment() : Fragment(), OnMapReadyCallback {
         }
     }
     //@RequiresApi(Build.VERSION_CODES.N)
+    /**
+     * Sets up the map and initializes location-related functionality.
+     *
+     * @param googleMap The GoogleMap instance to be set up.
+     */
     private fun setUpMap(googleMap: GoogleMap){
         if (ActivityCompat.checkSelfPermission(
                 requireContext(),
@@ -347,7 +383,12 @@ class MapsFragment() : Fragment(), OnMapReadyCallback {
             }
         }
     }
-
+    /**
+     * Places markers on the map for the given list of locations.
+     *
+     * @param markersList The list of LocationItem objects.
+     * @param googleMap The GoogleMap instance to place the markers on.
+     */
     private fun placeMarkers(markersList: ArrayList<LocationItem>,googleMap: GoogleMap) {
         val ic: BitmapDescriptor by lazy {
             val color = context?.let { ContextCompat.getColor(it, R.color.blue_boat) }

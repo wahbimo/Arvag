@@ -70,7 +70,8 @@ Surfez sur la vague !
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:translationY="100dp"
-            tools:listitem="@layout/upper_category_button"/>
+            tools:listitem="@layout/upper_category_button"
+            />
 
     </LinearLayout>
 

@@ -4,6 +4,8 @@ plugins {
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
     id("kotlin-parcelize")
     id 'kotlin-kapt'
+    id 'org.jetbrains.dokka' version '1.8.10'
+
 }
 
 android {
@@ -79,7 +81,6 @@ dependencies {
 
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1'
-
 
 
 

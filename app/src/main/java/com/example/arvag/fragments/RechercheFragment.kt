@@ -33,12 +33,13 @@ import java.io.IOException
 import java.nio.charset.Charset
 
 
-/**
- * A simple [Fragment] subclass.
- * Use the [RechercheFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 
+/**
+
+* A fragment that displays a search interface and a list of products.
+
+* It allows users to search for products, filter and sort them based on different criteria.
+ */
 class RechercheFragment : Fragment(), IProductLoadListener, ICategoryLoadListener,
     CategoryOnClickInterface, IRecyclerClickListener, OnFilterIconChangedListener,OnClickFilterButtons
 {
@@ -141,7 +142,10 @@ class RechercheFragment : Fragment(), IProductLoadListener, ICategoryLoadListene
 
 
 
+    /**
 
+    * Initializes the necessary components and sets up the layout.
+     */
     private fun init() {
         productLoadListener = this
         categoryLoadListener = this
@@ -162,7 +166,12 @@ class RechercheFragment : Fragment(), IProductLoadListener, ICategoryLoadListene
         categoryView.layoutManager = categoryLayoutManager
     }
 
+    /**
 
+    * Retrieves the JSON content from the assets folder.
+    * @param fileName The name of the JSON file.
+    * @return The JSON content as a string, or null if there was an error.
+     */
     fun getJSONFromAssets(fileName: String): String? {
 
         var json: String?
@@ -184,7 +193,10 @@ class RechercheFragment : Fragment(), IProductLoadListener, ICategoryLoadListene
         }
         return json
     }
+    /**
 
+    * Loads the products from the JSON file.
+     */
     private fun loadProductsFromJSONByCategory(category: String, list: ArrayList<Product>) {
         val objProducts = JSONObject(getJSONFromAssets("dataBaseProducts.json")!!)
         makingProductsListByCategory(objProducts.getJSONArray("products"), list, category)
@@ -237,11 +249,20 @@ class RechercheFragment : Fragment(), IProductLoadListener, ICategoryLoadListene
         }
     }
 
+    /**
+    * Loads the products from the JSON file.
+     */
     private fun loadProductFromJSON() {
         val objProducts = JSONObject(getJSONFromAssets("dataBaseProducts.json")!!)
         makingProductsList(objProducts.getJSONArray("products"), productList)
     }
 
+    /**
+
+    * Creates a list of products from the JSON array.
+    * @param productsArray The JSON array containing the product data.
+    * @param productsList The list to populate with the product data.
+     */
     fun makingProductsList(
         productsArray: JSONArray,
         productsList: ArrayList<Product>
