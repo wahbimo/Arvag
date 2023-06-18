@@ -107,6 +107,10 @@ class RechercheFragment : Fragment(), IProductLoadListener, ICategoryLoadListene
                 if (newText != null && newText != "") {
                     filter(newText)
                 }
+                if (newText == ""){
+                    productsAdapter = ProductItemAdapter(requireContext(), productList!!, recyclerClickListener)
+                    recyclerProductView.adapter = productsAdapter
+                }
                 return false
             }
 
@@ -401,7 +405,7 @@ class RechercheFragment : Fragment(), IProductLoadListener, ICategoryLoadListene
     if (filteredProductList.isEmpty()) {
         // if no item is added in filtered list we are
         // displaying a toast message as no data found.
-        //Toast.makeText(requireContext(), "Aucune donnée disponible...", Toast.LENGTH_SHORT).show()
+        Toast.makeText(requireContext(), "Aucun produit trouvé.", Toast.LENGTH_SHORT).show()
     } else {
         // at last we are passing that filtered
         // list to our adapter class.
