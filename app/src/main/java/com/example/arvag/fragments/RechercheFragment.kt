@@ -405,6 +405,8 @@ class RechercheFragment : Fragment(), IProductLoadListener, ICategoryLoadListene
     if (filteredProductList.isEmpty()) {
         // if no item is added in filtered list we are
         // displaying a toast message as no data found.
+        productsAdapter = ProductItemAdapter(requireContext(), filteredProductList!!, recyclerClickListener)
+        recyclerProductView.adapter = productsAdapter
         Toast.makeText(requireContext(), "Aucun produit trouvé.", Toast.LENGTH_SHORT).show()
     } else {
         // at last we are passing that filtered

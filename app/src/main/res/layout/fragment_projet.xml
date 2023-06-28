@@ -40,7 +40,8 @@
                 android:paddingHorizontal="15dp"
                 android:justificationMode="inter_word"
                 android:text="Parce qu’il parait essentiel de relever les défis environnementaux, Arvag achemine les marchandises par voilier au plus près du consommateur sur le littoral de la façade atlantique, entre Bordeaux et Brest. L’application Arvag va vous permettre de contribuer personnellement à ce projet car en achetant les produits proposés vous devenez co-propriétaire du bateau voué à les transporter. Surfez sur la vague !"
-                android:textColor="@color/arvag_purp" />
+                android:textColor="@color/arvag_purp"
+                android:layout_marginTop="30dp"/>
 
             <Button
                 android:id="@+id/button2"
@@ -49,7 +50,8 @@
                 android:layout_gravity="center"
                 android:backgroundTint="@color/arvag_purp"
                 android:padding="7dp"
-                android:text="Envie d'en savoir plus ?" />
+                android:text="Envie d'en savoir plus ?"
+                android:layout_marginTop="15dp"/>
 
         </LinearLayout>
 
@@ -67,9 +69,11 @@
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                 android:textColor="@color/arvag_purp"
                 android:textSize="25sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="5dp"
                 android:id="@+id/recycler_partners"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

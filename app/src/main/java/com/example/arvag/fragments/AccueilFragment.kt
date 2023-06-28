@@ -7,7 +7,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+
 import android.widget.Button
+import android.widget.MediaController
+import android.widget.Toast
+import android.widget.VideoView
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 
@@ -18,6 +22,7 @@ import java.util.*
 /**
  * A fragment that displays buttons for accessing more information and contacting.
  */
+
 class AccueilFragment : Fragment() {
     lateinit var moreInfoButton: Button
     lateinit var contactButton: Button
@@ -25,13 +30,17 @@ class AccueilFragment : Fragment() {
     private lateinit var viewPager: ViewPager2
 
     private val carouselImages = listOf(
-        R.drawable.boat1,
+        R.drawable.bv,
         R.drawable.boat2,
         R.drawable.boat3
     )
 
     private var currentPage = 0
     private lateinit var timer: Timer
+
+    var simpleVideoView: VideoView? = null
+
+    var mediaControls: MediaController? = null
 
     /**
      * Inflates the layout for the fragment.
@@ -77,6 +86,47 @@ class AccueilFragment : Fragment() {
 
         // Start automatic carousel rotation
         startCarouselRotation()
+
+        simpleVideoView = view.findViewById<View>(R.id.videoView) as VideoView
+
+        if (mediaControls == null) {
+            // creating an object of media controller class
+            mediaControls = MediaController(requireContext())
+
+            // set the anchor view for the video view
+            mediaControls!!.setAnchorView(this.simpleVideoView)
+        }
+
+        // set the media controller for video view
+        simpleVideoView!!.setMediaController(mediaControls)
+
+        // set the absolute path of the video file which is going to be played
+        simpleVideoView!!.setVideoURI(Uri.parse("android.resource://"
+                + requireContext().packageName + "/" + R.raw.video))
+
+        simpleVideoView!!.requestFocus()
+
+        // starting the video
+        simpleVideoView!!.start()
+
+        // display a toast message
+        // after the video is completed
+        simpleVideoView!!.setOnCompletionListener {
+            Toast.makeText(requireContext(), "Video completed",
+                Toast.LENGTH_LONG).show()
+            true
+        }
+
+        // display a toast message if any
+        // error occurs while playing the video
+        simpleVideoView!!.setOnErrorListener { mp, what, extra ->
+            Toast.makeText(requireContext(), "An Error Occurred " +
+                    "While Playing Video !!!", Toast.LENGTH_LONG).show()
+            false
+        }
+
+
+
     }
 
     private fun startCarouselRotation() {
@@ -91,7 +141,7 @@ class AccueilFragment : Fragment() {
                     viewPager.setCurrentItem(currentPage, true)
                 }
             }
-        }, 5000, 5000) // Change images every 5 seconds
+        }, 3000, 3000) // Change images every 3 seconds
     }
 
     override fun onDestroyView() {
