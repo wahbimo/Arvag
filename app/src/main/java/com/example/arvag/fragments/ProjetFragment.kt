@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.arvag.R
 import com.example.arvag.adapter.PartnersAdapter
@@ -55,7 +56,9 @@ class ProjetFragment : Fragment() {
             startActivity(browserIntent)
         }
 
-        val gridLayoutManager = GridLayoutManager(context, 1)
+       val gridLayoutManager = GridLayoutManager(context, 1)
+       // val gridLayoutManager = LinearLayoutManager(requireContext())
+
 
         val objPartners = JSONObject(getJSONFromAssets("partenaires.json")!!)
 

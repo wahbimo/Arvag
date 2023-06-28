@@ -88,4 +88,4 @@
         >
     </androidx.appcompat.widget.SearchView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
